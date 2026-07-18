@@ -1,26 +1,183 @@
 @import "tailwindcss";
 
+/* ============================================================
+   Void Architects — design system
+   Palette: cool concrete neutral + near-black. Near-monochrome.
+   (Deliberately NOT warm cream.) OKLCH throughout.
+   ============================================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: oklch(0.964 0.002 250);   /* gallery concrete off-white */
+  --paper-2: oklch(0.945 0.003 250); /* recessed panels */
+  --pure: oklch(0.99 0 0);
+  --ink: oklch(0.17 0.006 265);      /* near-black charcoal */
+  --ink-soft: oklch(0.30 0.006 265);
+  --muted: oklch(0.50 0.006 265);    /* meets 4.5:1 on paper */
+  --line: oklch(0.86 0.003 260);
+  --accent: oklch(0.62 0.10 55);     /* faint clay — used sparingly */
+
+  --z-cursor: 90;
+  --z-nav: 60;
+  --z-grain: 80;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-pure: var(--pure);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: clip;
+  font-feature-settings: "ss01", "cv01";
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* ---- Film grain: fixed, subtle, over everything ---- */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-grain);
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+}
+
+/* ---- Custom cursor (desktop, fine pointer only) ---- */
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-cursor);
+  pointer-events: none;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  transition: opacity 0.2s;
+}
+.cursor-ring {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #fff;
+  transition: width 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+    height 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.2s;
+}
+.cursor-ring.is-hover {
+  width: 66px;
+  height: 66px;
+}
+@media (hover: hover) and (pointer: fine) {
+  body.has-cursor,
+  body.has-cursor a,
+  body.has-cursor button {
+    cursor: none;
+  }
+}
+@media (hover: none), (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring { display: none; }
+}
+
+/* ---- Type utilities ---- */
+.display {
+  font-family: var(--font-display), var(--font-sans), sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 0.92;
+  text-wrap: balance;
+}
+@layer components {
+  .label {
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--muted); /* Tailwind text-* utilities still override */
+  }
+}
+.prose-lg { max-width: 62ch; text-wrap: pretty; }
+
+/* ---- Marquee ---- */
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+/* ============================================================
+   Motion — scroll-driven, content visible by DEFAULT.
+   Enhancement only where animation-timeline is supported.
+   ============================================================ */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(34px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes unmask {
+  from { clip-path: inset(100% 0 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+@keyframes parallax-y {
+  from { transform: translateY(-6%) scale(1.12); }
+  to { transform: translateY(6%) scale(1.12); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: rise linear both;
+      animation-timeline: view();
+      animation-range: entry 4% cover 20%;
+    }
+    /* image mask reveal */
+    .reveal-mask {
+      animation: unmask cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 24%;
+    }
+  }
+  @supports (animation-timeline: scroll()) {
+    .parallax {
+      animation: parallax-y linear both;
+      animation-timeline: scroll(root);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .marquee { animation: none; }
 }
