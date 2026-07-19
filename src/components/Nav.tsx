@@ -1,23 +1,24 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { SITE } from "@/lib/data";
 
 const LINKS = [
-  { href: "/#work", label: "Work" },
-  { href: "/#services", label: "Services" },
-  { href: "/#studio", label: "Studio" },
-  { href: "/#testimonials", label: "Clients" },
-  { href: "/#estimate", label: "Free estimate" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/work", label: "Work" },
+  { href: "/services", label: "Services" },
+  { href: "/studio", label: "Studio" },
+  { href: "/clients", label: "Clients" },
+  { href: "/estimate", label: "Free estimate" },
+  { href: "/contact", label: "Contact" },
 ];
 
-// onDark = the top of the page behind the nav is a dark hero image.
-// Home passes onDark; content pages (light top) leave it false.
 export default function Nav({ onDark = false }: { onDark?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -26,9 +27,11 @@ export default function Nav({ onDark = false }: { onDark?: boolean }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Light treatment only while transparent over a dark hero.
+  useEffect(() => setOpen(false), [pathname]);
+
   const light = onDark && !scrolled && !open;
   const solid = scrolled || open;
+  const isActive = (href: string) => pathname === href;
 
   return (
     <header
@@ -39,38 +42,41 @@ export default function Nav({ onDark = false }: { onDark?: boolean }) {
       }`}
     >
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-5 py-4 md:px-10 md:py-5">
-        <Link
-          href="/"
-          className={`flex items-baseline gap-2 leading-none transition-colors duration-500 ${
-            light ? "text-paper" : "text-ink"
-          }`}
-        >
-          <span className="display text-lg tracking-tight sm:text-xl">
-            Void
-          </span>
-          <span
-            className={`label ${light ? "text-paper/70" : "text-muted"}`}
-          >
-            Architects
-          </span>
+        <Link href="/" aria-label="Void Architects — home" className="block">
+          <Image
+            src={light ? "/logo-light.png" : "/logo-dark.png"}
+            alt="Void Architects"
+            width={901}
+            height={257}
+            priority
+            className="h-6 w-auto md:h-7"
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex xl:gap-9">
           {LINKS.map((l) => (
-            <a
+            <Link
               key={l.href}
               href={l.href}
               className={`whitespace-nowrap text-sm tracking-wide transition-colors ${
                 light
                   ? "text-paper/80 hover:text-paper"
-                  : "text-ink/80 hover:text-ink"
-              }`}
+                  : "text-ink/70 hover:text-ink"
+              } ${isActive(l.href) ? (light ? "!text-paper" : "!text-ink") : ""}`}
             >
-              {l.label}
-            </a>
+              <span
+                className={
+                  isActive(l.href)
+                    ? "border-b border-current pb-1"
+                    : undefined
+                }
+              >
+                {l.label}
+              </span>
+            </Link>
           ))}
-          <a
-            href="/#estimate"
+          <Link
+            href="/estimate"
             className={`whitespace-nowrap rounded-full border px-5 py-2 text-sm transition-colors ${
               light
                 ? "border-paper/70 text-paper hover:bg-paper hover:text-ink"
@@ -78,7 +84,7 @@ export default function Nav({ onDark = false }: { onDark?: boolean }) {
             }`}
           >
             Book 3D consult
-          </a>
+          </Link>
         </nav>
 
         <button
@@ -103,14 +109,15 @@ export default function Nav({ onDark = false }: { onDark?: boolean }) {
       {open && (
         <nav className="flex flex-col gap-1 border-t border-line bg-paper/95 px-5 pb-6 pt-2 backdrop-blur-md lg:hidden">
           {LINKS.map((l) => (
-            <a
+            <Link
               key={l.href}
               href={l.href}
-              onClick={() => setOpen(false)}
-              className="border-b border-line py-4 text-lg text-ink"
+              className={`border-b border-line py-4 text-lg ${
+                isActive(l.href) ? "text-ink" : "text-ink/70"
+              }`}
             >
               {l.label}
-            </a>
+            </Link>
           ))}
           <a
             href={`tel:${SITE.phone.replace(/\s/g, "")}`}

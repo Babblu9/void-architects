@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SITE } from "@/lib/data";
 
 export default function Hero() {
@@ -43,18 +44,18 @@ export default function Hero() {
             light-filled work across {SITE.coverage}.
           </p>
           <div className="flex items-center gap-6">
-            <a
-              href="#estimate"
+            <Link
+              href="/estimate"
               className="rounded-full bg-paper px-7 py-3 text-sm font-medium text-ink transition-transform duration-500 hover:-translate-y-0.5"
             >
               Get a free estimate
-            </a>
-            <a
-              href="#work"
+            </Link>
+            <Link
+              href="/work"
               className="text-sm text-paper underline-offset-8 hover:underline"
             >
               Selected work
-            </a>
+            </Link>
           </div>
         </div>
       </div>

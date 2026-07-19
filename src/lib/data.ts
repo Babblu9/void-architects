@@ -87,8 +87,8 @@ export const PROJECTS: Project[] = [
     year: "2024",
     area: "3,375 sq.ft.",
     image: "/projects/sree-reddy.jpg",
-    w: 2400,
-    h: 1697,
+    w: 1326,
+    h: 1186,
     blurb:
       "A contemporary tropical-minimalist duplex — cubist massing, industrial detailing and biophilic design for a climate-responsive, timeless home.",
   },
