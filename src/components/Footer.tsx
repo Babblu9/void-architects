@@ -20,9 +20,9 @@ export default function Footer() {
             <Image
               src="/logo-light.png"
               alt="Void Architects"
-              width={901}
-              height={257}
-              className="h-7 w-auto"
+              width={904}
+              height={258}
+              className="h-9 w-auto"
             />
             <p className="mt-5 text-sm">
               {SITE.tagline} studio working across {SITE.coverage}, from studios

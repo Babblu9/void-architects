@@ -46,10 +46,10 @@ export default function Nav({ onDark = false }: { onDark?: boolean }) {
           <Image
             src={light ? "/logo-light.png" : "/logo-dark.png"}
             alt="Void Architects"
-            width={901}
-            height={257}
+            width={904}
+            height={258}
             priority
-            className="h-6 w-auto md:h-7"
+            className="h-8 w-auto md:h-9"
           />
         </Link>
 
