@@ -58,6 +58,8 @@ export type Project = {
   year: string;
   area: string;
   image: string;
+  w: number;
+  h: number;
   blurb: string;
 };
 
@@ -72,6 +74,8 @@ export const PROJECTS: Project[] = [
     year: "2024",
     area: "12,200 sq.ft.",
     image: "/projects/nit-warangal.jpg",
+    w: 2400,
+    h: 1355,
     blurb:
       "A monumental campus gateway for NIT Warangal (CPWD) fusing contemporary minimalism with Neo-Vernacular Kakatiya heritage, parametric accents and landscape urbanism.",
   },
@@ -83,6 +87,8 @@ export const PROJECTS: Project[] = [
     year: "2024",
     area: "3,375 sq.ft.",
     image: "/projects/sree-reddy.jpg",
+    w: 2400,
+    h: 1697,
     blurb:
       "A contemporary tropical-minimalist duplex — cubist massing, industrial detailing and biophilic design for a climate-responsive, timeless home.",
   },
@@ -94,6 +100,8 @@ export const PROJECTS: Project[] = [
     year: "2025",
     area: "9,125 sq.ft.",
     image: "/projects/pothunuri.jpg",
+    w: 1370,
+    h: 1148,
     blurb:
       "A contemporary luxury convention hall — clean architectural lines, premium materials and warm hospitality lighting forming a distinctive landmark of celebration and prestige.",
   },
@@ -105,6 +113,8 @@ export const PROJECTS: Project[] = [
     year: "2024",
     area: "21,000 sq.ft.",
     image: "/projects/lbs-school.jpg",
+    w: 2400,
+    h: 1057,
     blurb:
       "A low-maintenance institutional building in locally-sourced brick cladding, using natural light and landscape as its primary design elements within a tight budget.",
   },
@@ -116,6 +126,8 @@ export const PROJECTS: Project[] = [
     year: "2023",
     area: "1,200 sq.ft.",
     image: "/projects/kiran-kidney.jpg",
+    w: 1280,
+    h: 720,
     blurb:
       "A contemporary-minimal urology & gastroenterology clinic — clean lines, warm textures and glass partitions folding a full care journey into a compact, healing space.",
   },
@@ -127,6 +139,8 @@ export const PROJECTS: Project[] = [
     year: "2024",
     area: "6,150 sq.ft.",
     image: "/projects/matrusri.jpg",
+    w: 2000,
+    h: 1449,
     blurb:
       "A contemporary-minimal degree college for a girls' campus — rectilinear design principles giving an affordable build a strong, well-balanced commercial identity.",
   },
@@ -138,6 +152,8 @@ export const PROJECTS: Project[] = [
     year: "2023",
     area: "1,985 sq.ft.",
     image: "/projects/harsha.jpg",
+    w: 1472,
+    h: 1068,
     blurb:
       "A contemporary tropical courtyard home — a central court drawing in light and ventilation, with luxury suites and seamless indoor–outdoor living.",
   },
@@ -149,6 +165,8 @@ export const PROJECTS: Project[] = [
     year: "2024",
     area: "4,500 sq.ft.",
     image: "/projects/sridhar.jpg",
+    w: 2000,
+    h: 1500,
     blurb:
       "Warm contemporary-minimal interiors for a 3BHK duplex — clean framing, natural wood, open planning and understated luxury detailed to the joint.",
   },
@@ -160,6 +178,8 @@ export const PROJECTS: Project[] = [
     year: "2025",
     area: "4,000 sq.ft.",
     image: "/projects/spinlaunch.jpg",
+    w: 1920,
+    h: 1080,
     blurb:
       "Modern institutional interiors built for collaboration — maximised space, durable materials and brand identity woven into an inspiring, welcoming campus.",
   },
@@ -171,6 +191,8 @@ export const PROJECTS: Project[] = [
     year: "2024",
     area: "3,200 sq.ft.",
     image: "/projects/v-ramesh.jpg",
+    w: 2000,
+    h: 1500,
     blurb:
       "A contemporary-minimal dermatology clinic balancing strict clinical hygiene with a warm, spa-like calm — hospitality-inspired planning and biophilic materiality.",
   },
@@ -226,6 +248,13 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Mr Sridhar",
     role: "Probationary Officer, SBI",
     project: "Sridhar Residence Interiors",
+  },
+  {
+    quote:
+      "A perfect blend of aesthetics and functionality. The collaborative zones have completely changed how our team interacts — the modern campus interiors feel welcoming and have noticeably boosted engagement.",
+    author: "Mr Anil Kumar Nelagapudi",
+    role: "SpinLaunch",
+    project: "SpinLaunch Campus",
   },
 ];
 

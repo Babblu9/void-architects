@@ -9,6 +9,7 @@ import { PROJECTS } from "@/lib/data";
 export default function Portfolio() {
   const [active, setActive] = useState<number | null>(null);
   const previewRef = useRef<HTMLDivElement>(null);
+  const activeP = active !== null ? PROJECTS[active] : null;
 
   const onMove = (e: React.MouseEvent) => {
     const el = previewRef.current;
@@ -59,42 +60,41 @@ export default function Portfolio() {
                 <span className="col-span-2 hidden text-right text-sm text-muted md:block md:col-span-1">
                   {p.year}
                 </span>
-                {/* inline image for touch / no-hover devices */}
-                <span className="relative col-span-12 mt-3 block aspect-[16/10] w-full overflow-hidden rounded-lg md:hidden">
-                  <Image
-                    src={p.image}
-                    alt={`${p.title} — ${p.category} in ${p.location}`}
-                    fill
-                    sizes="100vw"
-                    className="object-cover"
-                  />
-                </span>
+                {/* inline image for touch / no-hover devices — natural ratio */}
+                <Image
+                  src={p.image}
+                  alt={`${p.title} — ${p.category} in ${p.location}`}
+                  width={p.w}
+                  height={p.h}
+                  sizes="100vw"
+                  className="col-span-12 mt-3 block h-auto w-full rounded-lg md:hidden"
+                />
               </a>
             </li>
           ))}
         </ol>
       </div>
 
-      {/* Cursor-following preview (desktop) */}
+      {/* Cursor-following preview (desktop) — sized to each image's ratio */}
       <div
         ref={previewRef}
         aria-hidden
-        className={`pointer-events-none fixed left-0 top-0 z-40 hidden aspect-[4/5] w-[300px] overflow-hidden rounded-lg transition-opacity duration-300 md:block ${
+        style={{
+          width: 380,
+          aspectRatio: activeP ? `${activeP.w} / ${activeP.h}` : "3 / 2",
+        }}
+        className={`pointer-events-none fixed left-0 top-0 z-40 hidden overflow-hidden rounded-lg shadow-2xl transition-opacity duration-300 md:block ${
           active !== null ? "opacity-100" : "opacity-0"
         }`}
       >
-        {PROJECTS.map((p, i) => (
-          <Image
-            key={p.slug}
-            src={p.image}
+        {activeP && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={activeP.image}
             alt=""
-            fill
-            sizes="300px"
-            className={`object-cover transition-opacity duration-300 ${
-              active === i ? "opacity-100" : "opacity-0"
-            }`}
+            className="h-full w-full object-cover"
           />
-        ))}
+        )}
       </div>
     </section>
   );
