@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
+import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
 
 export const metadata: Metadata = {
-  title: "Clients",
+  title: "Clients & Work",
   description:
-    "What Void Architects' clients say — doctors, engineers, educators and institutions across Telangana & India.",
+    "Selected projects and client words — homes, hospitals, campuses and convention halls by Void Architects across Telangana & India.",
   alternates: { canonical: "/clients" },
 };
 
 export default function ClientsPage() {
   return (
     <PageShell>
+      <Portfolio />
       <Testimonials />
     </PageShell>
   );

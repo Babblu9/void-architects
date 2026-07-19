@@ -51,7 +51,7 @@ export default function Hero() {
               Get a free estimate
             </Link>
             <Link
-              href="/work"
+              href="/clients"
               className="text-sm text-paper underline-offset-8 hover:underline"
             >
               Selected work

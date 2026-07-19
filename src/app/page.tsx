@@ -42,7 +42,7 @@ export default function Home() {
               Featured work
             </h2>
             <Link
-              href="/work"
+              href="/clients"
               className="whitespace-nowrap text-sm underline-offset-8 hover:underline"
             >
               All projects →
@@ -50,7 +50,7 @@ export default function Home() {
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {featured.map((p) => (
-              <Link key={p.slug} href="/work" className="group block">
+              <Link key={p.slug} href="/clients" className="group block">
                 <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
                   <Image
                     src={p.image}

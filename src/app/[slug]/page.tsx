@@ -87,7 +87,7 @@ export default async function SeoPage({
               Start a project in {page.city}
             </a>
             <Link
-              href="/work"
+              href="/clients"
               className="rounded-full border border-ink px-7 py-3 text-sm transition-colors hover:bg-ink hover:text-paper"
             >
               See our work

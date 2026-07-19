@@ -3,10 +3,9 @@ import Image from "next/image";
 import { SITE } from "@/lib/data";
 
 const NAV = [
-  { href: "/work", label: "Work" },
   { href: "/services", label: "Services" },
   { href: "/studio", label: "Studio" },
-  { href: "/clients", label: "Clients" },
+  { href: "/clients", label: "Work & Clients" },
   { href: "/estimate", label: "Free estimate" },
   { href: "/contact", label: "Contact" },
 ];

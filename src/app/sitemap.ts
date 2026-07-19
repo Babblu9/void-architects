@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SEO_PAGES, SITE } from "@/lib/data";
 
-const ROUTES = ["work", "services", "studio", "clients", "estimate", "contact"];
+const ROUTES = ["services", "studio", "clients", "estimate", "contact"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
