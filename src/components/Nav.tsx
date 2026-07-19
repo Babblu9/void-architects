@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { SITE } from "@/lib/data";
 
 const LINKS = [
+  { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/studio", label: "Studio" },
   { href: "/clients", label: "Work & Clients" },

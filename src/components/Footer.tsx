@@ -3,6 +3,7 @@ import Image from "next/image";
 import { SITE } from "@/lib/data";
 
 const NAV = [
+  { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/studio", label: "Studio" },
   { href: "/clients", label: "Work & Clients" },
