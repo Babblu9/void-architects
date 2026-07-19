@@ -29,8 +29,8 @@ export default function Studio() {
       {/* Full-bleed image band */}
       <div className="reveal-mask relative mt-20 h-[52vh] min-h-[340px] w-full overflow-hidden md:mt-28 md:h-[76vh]">
         <Image
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=80"
-          alt="A courtyard house at dusk, warm interior light spilling through full-height glazing"
+          src="/projects/sree-reddy.jpg"
+          alt="Dr Sree Reddy Residence by Void Architects — a contemporary tropical-minimalist duplex at dusk"
           fill
           sizes="100vw"
           className="object-cover"

@@ -2,11 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    // ponytail: placeholder photos off Unsplash CDN. Swap for local /public
-    // images once the client sends real project photos — then delete this block.
-    remotePatterns: [
-      { protocol: "https", hostname: "images.unsplash.com" },
-    ],
+    // All imagery is now local (/public/projects). AVIF/WebP for perf.
     formats: ["image/avif", "image/webp"],
   },
 };

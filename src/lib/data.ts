@@ -30,8 +30,7 @@ export const SERVICES: Service[] = [
     title: "Architecture",
     blurb:
       "Residential, commercial and institutional buildings shaped by site, light and use — from first sketch to final handover.",
-    image:
-      "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1400&q=80",
+    image: "/projects/matrusri.jpg",
   },
   {
     key: "interior",
@@ -39,8 +38,7 @@ export const SERVICES: Service[] = [
     title: "Interiors",
     blurb:
       "Interiors that carry the architecture inward — material, joinery and light detailed to the millimetre.",
-    image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=80",
+    image: "/projects/sridhar.jpg",
   },
   {
     key: "design",
@@ -48,77 +46,202 @@ export const SERVICES: Service[] = [
     title: "Design",
     blurb:
       "Master planning, landscape and bespoke furniture — the full arc of a place, considered as one.",
-    image:
-      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=80",
+    image: "/projects/pothunuri.jpg",
   },
 ];
 
 export type Project = {
   slug: string;
   title: string;
-  category: "Architecture" | "Interior" | "Design";
+  category: string;
   location: string;
   year: string;
+  area: string;
   image: string;
-  span?: boolean; // wide tile in the grid
+  blurb: string;
 };
 
-// ponytail: Unsplash placeholders. Replace `image` URLs with /public paths
-// (e.g. "/projects/courtyard-house.jpg") when real photos arrive.
-const u = (id: string, w = 1200) =>
-  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
-
+// Real Void Architects projects. Images carved from the studio's own
+// client documents (3D concepts + on-site photography), stored in /public.
 export const PROJECTS: Project[] = [
   {
-    slug: "courtyard-house",
-    title: "Courtyard House",
-    category: "Architecture",
-    location: "Jubilee Hills, Hyderabad",
-    year: "2024",
-    image: u("1600585154340-be6161a56a0c", 1600),
-    span: true,
-  },
-  {
-    slug: "the-quiet-apartment",
-    title: "The Quiet Apartment",
-    category: "Interior",
-    location: "Banjara Hills, Hyderabad",
-    year: "2024",
-    image: u("1618221195710-dd6b41faaea6"),
-  },
-  {
-    slug: "stone-pavilion",
-    title: "Stone Pavilion",
-    category: "Architecture",
+    slug: "nit-warangal-entrance",
+    title: "NIT Warangal Entrance",
+    category: "Institutional / Landscape",
     location: "Warangal",
-    year: "2023",
-    image: u("1512917774080-9991f1c4c750"),
+    year: "2024",
+    area: "12,200 sq.ft.",
+    image: "/projects/nit-warangal.jpg",
+    blurb:
+      "A monumental campus gateway for NIT Warangal (CPWD) fusing contemporary minimalism with Neo-Vernacular Kakatiya heritage, parametric accents and landscape urbanism.",
   },
   {
-    slug: "warm-minimal-villa",
-    title: "Warm Minimal Villa",
+    slug: "dr-sree-reddy-residence",
+    title: "Dr Sree Reddy Residence",
+    category: "Residence",
+    location: "Hunter Road, Warangal",
+    year: "2024",
+    area: "3,375 sq.ft.",
+    image: "/projects/sree-reddy.jpg",
+    blurb:
+      "A contemporary tropical-minimalist duplex — cubist massing, industrial detailing and biophilic design for a climate-responsive, timeless home.",
+  },
+  {
+    slug: "pothunuri-convention-hall",
+    title: "Pothunuri Convention Hall",
+    category: "Commercial",
+    location: "Gorrekunta, Warangal",
+    year: "2025",
+    area: "9,125 sq.ft.",
+    image: "/projects/pothunuri.jpg",
+    blurb:
+      "A contemporary luxury convention hall — clean architectural lines, premium materials and warm hospitality lighting forming a distinctive landmark of celebration and prestige.",
+  },
+  {
+    slug: "lbs-school",
+    title: "LBS School",
+    category: "Institutional",
+    location: "Hyderabad",
+    year: "2024",
+    area: "21,000 sq.ft.",
+    image: "/projects/lbs-school.jpg",
+    blurb:
+      "A low-maintenance institutional building in locally-sourced brick cladding, using natural light and landscape as its primary design elements within a tight budget.",
+  },
+  {
+    slug: "kiran-kidney-care",
+    title: "Kiran Kidney Care",
+    category: "Healthcare",
+    location: "Hanamkonda, Warangal",
+    year: "2023",
+    area: "1,200 sq.ft.",
+    image: "/projects/kiran-kidney.jpg",
+    blurb:
+      "A contemporary-minimal urology & gastroenterology clinic — clean lines, warm textures and glass partitions folding a full care journey into a compact, healing space.",
+  },
+  {
+    slug: "sree-mathrushri-college",
+    title: "Sree Mathrushri College",
+    category: "Institutional",
+    location: "Bheemaram, Hanamkonda",
+    year: "2024",
+    area: "6,150 sq.ft.",
+    image: "/projects/matrusri.jpg",
+    blurb:
+      "A contemporary-minimal degree college for a girls' campus — rectilinear design principles giving an affordable build a strong, well-balanced commercial identity.",
+  },
+  {
+    slug: "harsha-residence",
+    title: "Harsha Residence",
+    category: "Residence",
+    location: "Gadepally, Warangal",
+    year: "2023",
+    area: "1,985 sq.ft.",
+    image: "/projects/harsha.jpg",
+    blurb:
+      "A contemporary tropical courtyard home — a central court drawing in light and ventilation, with luxury suites and seamless indoor–outdoor living.",
+  },
+  {
+    slug: "sridhar-interiors",
+    title: "Sridhar Residence Interiors",
     category: "Interior",
-    location: "Kokapet, Hyderabad",
-    year: "2023",
-    image: u("1600607687939-ce8a6c25118c"),
+    location: "Ghanpur, Warangal",
+    year: "2024",
+    area: "4,500 sq.ft.",
+    image: "/projects/sridhar.jpg",
+    blurb:
+      "Warm contemporary-minimal interiors for a 3BHK duplex — clean framing, natural wood, open planning and understated luxury detailed to the joint.",
   },
   {
-    slug: "campus-landscape",
-    title: "Campus Landscape",
-    category: "Design",
-    location: "Warangal",
-    year: "2022",
-    image: u("1600566753086-00f18fb6b3ea", 1600),
-    span: true,
+    slug: "spinlaunch-campus",
+    title: "SpinLaunch Campus",
+    category: "Interior",
+    location: "Madhapur, Hyderabad",
+    year: "2025",
+    area: "4,000 sq.ft.",
+    image: "/projects/spinlaunch.jpg",
+    blurb:
+      "Modern institutional interiors built for collaboration — maximised space, durable materials and brand identity woven into an inspiring, welcoming campus.",
   },
   {
-    slug: "concrete-studio",
-    title: "Concrete Studio",
-    category: "Architecture",
-    location: "Gachibowli, Hyderabad",
-    year: "2022",
-    image: u("1494203484021-3c454daf695d"),
+    slug: "dr-v-ramesh-skin-clinic",
+    title: "Dr V Ramesh Skin Clinic",
+    category: "Healthcare",
+    location: "Hanamkonda, Warangal",
+    year: "2024",
+    area: "3,200 sq.ft.",
+    image: "/projects/v-ramesh.jpg",
+    blurb:
+      "A contemporary-minimal dermatology clinic balancing strict clinical hygiene with a warm, spa-like calm — hospitality-inspired planning and biophilic materiality.",
   },
+];
+
+export type Testimonial = {
+  quote: string;
+  author: string;
+  role: string;
+  project: string;
+};
+
+// Verbatim client feedback from the studio's project records.
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    quote:
+      "The design perfectly balances contemporary minimalism with regional heritage, resulting in an iconic campus entrance. We appreciate the creativity, attention to detail, and professional execution delivered by VOID Architects.",
+    author: "CPWD",
+    role: "National Institute of Technology, Warangal",
+    project: "NIT Warangal Entrance",
+  },
+  {
+    quote:
+      "VOID Architects transformed our vision into a beautiful contemporary home. Every space is thoughtfully planned with excellent natural lighting, ventilation and functionality. The final design exceeded our expectations.",
+    author: "Dr Sree Reddy",
+    role: "MBBS, MCh (USA)",
+    project: "Dr Sree Reddy Residence",
+  },
+  {
+    quote:
+      "The final outcome exceeded our expectations. The design feels premium, functional and timeless — exactly what we envisioned: a contemporary, elegant and efficient healthcare environment.",
+    author: "Dr Uske Kiran",
+    role: "MS, MCh Urology — Gold Medalist",
+    project: "Kiran Kidney Care",
+  },
+  {
+    quote:
+      "From concept to completion, the team understood our requirements perfectly. A perfect blend of functionality, elegance and contemporary architecture — thank you, VOID Architects, for bringing our vision to life.",
+    author: "Mr Ugender",
+    role: "M.Tech Gold Medalist, Osmania University",
+    project: "Sree Mathrushri College",
+  },
+  {
+    quote:
+      "Working with VOID Architects was a wonderful experience. They translated our vision into a contemporary architectural statement that is elegant, functional and truly iconic.",
+    author: "Mr P. Venkata Ramana",
+    role: "Chief Engineer, Indian Merchant Navy",
+    project: "Pothunuri Convention Hall",
+  },
+  {
+    quote:
+      "VOID Architects perfectly understood our vision and transformed it into a beautiful, functional home. Elegant interiors, excellent material selection and exceptional attention to detail — we are delighted.",
+    author: "Mr Sridhar",
+    role: "Probationary Officer, SBI",
+    project: "Sridhar Residence Interiors",
+  },
+];
+
+// Client roster — real names/institutions. (No logos: several clients are
+// private individuals, and the local "SpinLaunch" is unrelated to the US firm,
+// so a web-scraped logo would be wrong. Add real logo files if the client
+// supplies them.)
+export const CLIENTS = [
+  "NIT Warangal · CPWD",
+  "LBS School",
+  "Sree Mathrushri Degree College",
+  "SpinLaunch",
+  "Kiran Kidney Care",
+  "Dr V Ramesh Skin Clinic",
+  "Pothunuri Convention Hall",
+  "Dr Sree Reddy",
 ];
 
 // Studio metrics — architect proof-of-quality, no revenue.

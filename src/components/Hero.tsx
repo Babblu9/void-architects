@@ -7,8 +7,8 @@ export default function Hero() {
       {/* Parallax image layer */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2400&q=80"
-          alt="Board-marked concrete facade cut by a shaft of afternoon light"
+          src="/projects/nit-warangal.jpg"
+          alt="Void Architects' monumental heritage gateway design for NIT Warangal at dusk"
           fill
           priority
           sizes="100vw"
