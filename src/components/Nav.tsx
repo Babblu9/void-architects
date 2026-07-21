@@ -27,7 +27,12 @@ export default function Nav({ onDark = false }: { onDark?: boolean }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => setOpen(false), [pathname]);
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setOpen(false);
+    }, 0);
+    return () => clearTimeout(timeoutId);
+  }, [pathname]);
 
   const light = onDark && !scrolled && !open;
   const solid = scrolled || open;

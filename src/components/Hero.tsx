@@ -1,22 +1,89 @@
+"use client";
+
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { SITE } from "@/lib/data";
 
+const SLIDES = [
+  {
+    id: "01",
+    title: "Speaking Through Spaces.",
+    image: "/projects/nit-warangal.jpg",
+    alt: "Void Architects' monumental campus gateway design for NIT Warangal at dusk",
+  },
+  {
+    id: "02",
+    title: "Embracing Absence. Honoring Silence.",
+    image: "/projects/sree-reddy.jpg",
+    alt: "Dr Sree Reddy Residence by Void Architects — contemporary tropical-minimalist duplex at dusk",
+  },
+  {
+    id: "03",
+    title: "Leaving Lasting Signatures.",
+    image: "/projects/pothunuri.jpg",
+    alt: "Pothunuri Convention Hall by Void Architects — contemporary luxury convention hall",
+  },
+];
+
+const ROTATE_INTERVAL = 6000; // 6 seconds
+
 export default function Hero() {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const startTimeRef = useRef<number>(0);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    startTimeRef.current = Date.now();
+
+    // Defer resetting progress to the next animation frame to avoid calling setState
+    // synchronously within the effect body.
+    const rafId = requestAnimationFrame(() => {
+      setProgress(0);
+    });
+
+    const tickInterval = 50;
+    timerRef.current = setInterval(() => {
+      const elapsed = Date.now() - startTimeRef.current;
+      const pct = Math.min((elapsed / ROTATE_INTERVAL) * 100, 100);
+      setProgress(pct);
+
+      if (elapsed >= ROTATE_INTERVAL) {
+        setActiveSlide((prev) => (prev + 1) % SLIDES.length);
+      }
+    }, tickInterval);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+    };
+  }, [activeSlide]);
+
+
   return (
     <section className="relative flex h-[100svh] min-h-[620px] w-full flex-col justify-between overflow-hidden">
-      {/* Parallax image layer */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <Image
-          src="/projects/nit-warangal.jpg"
-          alt="Void Architects' monumental heritage gateway design for NIT Warangal at dusk"
-          fill
-          priority
-          sizes="100vw"
-          className="parallax object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/10 to-ink/75" />
-      </div>
+      {/* Background images fade layer */}
+      {SLIDES.map((slide, idx) => (
+        <div
+          key={slide.id}
+          className={`absolute inset-0 -z-10 overflow-hidden transition-opacity duration-1000 ease-in-out ${
+            activeSlide === idx ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
+        >
+          <Image
+            src={slide.image}
+            alt={slide.alt}
+            fill
+            priority={idx === 0}
+            sizes="100vw"
+            className="parallax object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/10 to-ink/75" />
+        </div>
+      ))}
 
       {/* Top meta row */}
       <div className="mx-auto flex w-full max-w-[1600px] items-start justify-between px-5 pt-28 text-paper md:px-10 md:pt-32">
@@ -28,34 +95,78 @@ export default function Hero() {
         </span>
       </div>
 
-      {/* Headline */}
+      {/* Headline & Carousel Elements */}
       <div className="mx-auto w-full max-w-[1600px] px-5 pb-14 md:px-10 md:pb-16">
-        <h1 className="display overflow-hidden text-paper text-[clamp(2.4rem,7.5vw,6rem)]">
-          <span className="block [animation:unmask_1.1s_cubic-bezier(0.16,1,0.3,1)_0.1s_both]">
-            Space, shaped by
-          </span>
-          <span className="block [animation:unmask_1.1s_cubic-bezier(0.16,1,0.3,1)_0.28s_both]">
-            light &amp; silence.
-          </span>
-        </h1>
+        <div className="grid grid-cols-1 grid-rows-1">
+          {SLIDES.map((slide, idx) => (
+            <h1
+              key={slide.id}
+              className={`col-start-1 row-start-1 display text-paper text-[clamp(2.2rem,6.5vw,5.5rem)] transition-all duration-700 ease-out ${
+                activeSlide === idx
+                  ? "translate-y-0 opacity-100 pointer-events-auto"
+                  : "translate-y-8 opacity-0 pointer-events-none"
+              }`}
+            >
+              <span className="text-paper/40 font-mono text-[0.45em] align-top mr-4">
+                {slide.id}
+              </span>
+              {slide.title}
+            </h1>
+          ))}
+        </div>
+
         <div className="mt-8 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <p className="prose-lg max-w-[42ch] text-base text-paper/80 md:text-lg">
             An architecture, interiors &amp; design studio delivering considered,
             light-filled work across {SITE.coverage}.
           </p>
-          <div className="flex items-center gap-6">
-            <Link
-              href="/estimate"
-              className="rounded-full bg-paper px-7 py-3 text-sm font-medium text-ink transition-transform duration-500 hover:-translate-y-0.5"
-            >
-              Get a free estimate
-            </Link>
-            <Link
-              href="/clients"
-              className="text-sm text-paper underline-offset-8 hover:underline"
-            >
-              Selected work
-            </Link>
+
+          {/* Carousel Navigation Indicators & CTAs */}
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between md:gap-8">
+            <div className="flex gap-4">
+              {SLIDES.map((slide, idx) => (
+                <button
+                  key={slide.id}
+                  onClick={() => {
+                    setActiveSlide(idx);
+                  }}
+                  className="group flex flex-col items-start gap-1.5 py-2 text-left cursor-pointer"
+                  aria-label={`Go to slide ${slide.id}`}
+                >
+                  <span
+                    className={`text-[10px] font-mono tracking-wider transition-colors duration-300 ${
+                      activeSlide === idx ? "text-paper" : "text-paper/40 group-hover:text-paper/70"
+                    }`}
+                  >
+                    {slide.id}
+                  </span>
+                  <div className="h-[2px] w-10 bg-paper/20 relative rounded-full overflow-hidden">
+                    <div
+                      className="absolute left-0 top-0 h-full bg-paper rounded-full transition-all ease-linear"
+                      style={{
+                        width: activeSlide === idx ? `${progress}%` : "0%",
+                        transitionDuration: activeSlide === idx ? "50ms" : "0ms",
+                      }}
+                    />
+                  </div>
+                </button>
+              ))}
+            </div>
+
+            <div className="flex items-center gap-6">
+              <Link
+                href="/estimate"
+                className="rounded-full bg-paper px-7 py-3 text-sm font-medium text-ink transition-transform duration-500 hover:-translate-y-0.5"
+              >
+                Get a free estimate
+              </Link>
+              <Link
+                href="/clients"
+                className="text-sm text-paper underline-offset-8 hover:underline"
+              >
+                Selected work
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -67,3 +178,4 @@ export default function Hero() {
     </section>
   );
 }
+

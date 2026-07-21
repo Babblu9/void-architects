@@ -11,9 +11,12 @@ function useCountUp(target: number, decimals: number, run: boolean) {
     if (!run) return;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) {
-      setN(target);
-      return;
+      const rafId = requestAnimationFrame(() => {
+        setN(target);
+      });
+      return () => cancelAnimationFrame(rafId);
     }
+
     const dur = 1400;
     let raf = 0;
     let start = 0;
