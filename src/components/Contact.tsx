@@ -99,9 +99,9 @@ export default function Contact() {
                 </div>
                 {/* Hyderabad */}
                 <div className="flex flex-col gap-1.5">
-                  <span className="text-lg font-medium text-paper">Void Studio • Hyderabad</span>
-                  <span className="text-sm text-paper/60">Hyderabad, Telangana, India</span>
-                  <span className="text-sm text-paper/40 italic">(Complete Address)</span>
+                  <span className="text-lg font-medium text-paper">Hyderabad Studio</span>
+                  <span className="text-sm text-paper/60">First Floor, Ganesham Square,</span>
+                  <span className="text-sm text-paper/60">Road No. 7, Kakatiya Hills, Madhapur, Hyderabad</span>
                   <a href="tel:+91XXXXXXXXXX" className="text-sm text-paper/80 hover:text-paper hover:underline mt-1">
                     +91 XXXXX XXXXX
                   </a>
