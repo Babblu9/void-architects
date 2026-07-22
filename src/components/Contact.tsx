@@ -113,8 +113,8 @@ export default function Contact() {
             <div className="border-t border-paper/10 pt-8">
               <h3 className="label text-accent font-semibold mb-4">Connect</h3>
               <div className="flex flex-col gap-3">
-                <a href="mailto:desig@voidarchitects.space" className="text-lg text-paper/80 hover:text-paper hover:underline">
-                  desig@voidarchitects.space
+                <a href="mailto:designd@voidarchitects.space" className="text-lg text-paper/80 hover:text-paper hover:underline">
+                  designd@voidarchitects.space
                 </a>
                 <a href="tel:+917702831717" className="text-sm text-paper/60 hover:text-paper">
                   +91 77028 31717

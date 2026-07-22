@@ -3,9 +3,9 @@ import PageShell from "@/components/PageShell";
 import Estimate from "@/components/Estimate";
 
 export const metadata: Metadata = {
-  title: "Free Estimate & 3D Consultation",
+  title: "Book a 3D Consultation",
   description:
-    "Get an instant cost estimate for your project and book a free 3D consultation with Void Architects.",
+    "Book a 3D consultation with Void Architects to walk through your design concept before construction starts.",
   alternates: { canonical: "/estimate" },
 };
 
