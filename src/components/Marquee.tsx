@@ -1,8 +1,6 @@
 const WORDS = [
-  "Hanamkonda",
-  "Warangal",
-  "Madhapur",
-  "Hyderabad",
+  "Hanamkonda, Warangal.",
+  "Madhapur, Hyderabad.",
 ];
 
 // Full-bleed running band. Two identical tracks → seamless -50% loop.
