@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { SITE } from "@/lib/data";
+
 
 const LINKS = [
   { href: "/", label: "Home" },
@@ -125,12 +125,6 @@ export default function Nav({ onDark = false }: { onDark?: boolean }) {
               {l.label}
             </Link>
           ))}
-          <a
-            href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-            className="py-4 text-sm text-muted"
-          >
-            {SITE.phone}
-          </a>
         </nav>
       )}
     </header>
