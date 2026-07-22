@@ -284,10 +284,10 @@ export type Stat = {
 };
 
 export const STATS: Stat[] = [
-  { value: 120, suffix: "+", label: "Projects delivered" },
-  { value: 1.8, decimals: 1, suffix: "M", label: "Sq. ft. built" },
+  { value: 200, suffix: "+", label: "Projects delivered" },
+  { value: 2.5, decimals: 1, suffix: "M+", label: "Sq. ft. built" },
   { value: 2014, noCount: true, label: "In practice since" },
-  { value: 14, label: "Cities across India" },
+  { value: 26, label: "Cities discovered" },
 ];
 
 export const PROCESS = [
