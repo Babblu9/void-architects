@@ -203,6 +203,7 @@ export type Testimonial = {
   author: string;
   role: string;
   project: string;
+  image: string;
 };
 
 // Verbatim client feedback from the studio's project records.
@@ -213,6 +214,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "CPWD",
     role: "National Institute of Technology, Warangal",
     project: "The prestigious entrance of NIT(National Institute of Technology) Warangal",
+    image: "/projects/nit-warangal.jpg",
   },
   {
     quote:
@@ -220,6 +222,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Dr Sree Reddy",
     role: "MBBS, MCh (USA)",
     project: "Dr Sree Reddy Residence",
+    image: "/projects/sree-reddy.jpg",
   },
   {
     quote:
@@ -227,6 +230,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Dr Uske Kiran",
     role: "MS, MCh Urology — Gold Medalist",
     project: "Kiran Kidney Care",
+    image: "/projects/kiran-kidney.jpg",
   },
   {
     quote:
@@ -234,6 +238,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Mr Ugender",
     role: "M.Tech Gold Medalist, Osmania University",
     project: "Sri Matru Sri College",
+    image: "/projects/mathrushri-college.jpg",
   },
   {
     quote:
@@ -241,6 +246,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Mr P. Venkata Ramana",
     role: "Chief Engineer, Indian Merchant Navy",
     project: "Pothunuri Convention Hall",
+    image: "/projects/pothunuri.jpg",
   },
   {
     quote:
@@ -248,6 +254,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Mr Sridhar",
     role: "Probationary Officer, SBI",
     project: "Sridhar Residence Interiors",
+    image: "/projects/sridhar.jpg",
   },
   {
     quote:
@@ -255,6 +262,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Mr Anil Kumar Nelagapudi",
     role: "SpinLaunch",
     project: "SpinLaunch Campus",
+    image: "/projects/spinlaunch.jpg",
   },
 ];
 
