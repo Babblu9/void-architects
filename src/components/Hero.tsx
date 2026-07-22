@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { SITE } from "@/lib/data";
+
 
 const SLIDES = [
   {
@@ -84,8 +84,8 @@ export default function Hero() {
           <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/10 to-ink/75" />
         </div>
       ))}
-
-
+      {/* Spacer to push content down below absolute navbar */}
+      <div className="h-28 md:h-36" />
 
       {/* Headline & Carousel Elements */}
       <div className="mx-auto w-full max-w-[1600px] px-5 pb-14 md:px-10 md:pb-16">
@@ -107,7 +107,7 @@ export default function Hero() {
         <div className="mt-8 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <p className="prose-lg max-w-[42ch] text-base text-paper/80 md:text-lg">
             An architecture, interiors &amp; design studio delivering considered,
-            light-filled work across {SITE.coverage}.
+            light-filled work.
           </p>
 
           {/* Carousel Navigation Indicators & CTAs */}
