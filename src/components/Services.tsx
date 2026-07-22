@@ -33,13 +33,13 @@ export default function Services() {
     <section id="expertise" className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-36">
       <div className="reveal mb-20 grid gap-8 md:grid-cols-12 md:items-end">
         <div className="md:col-span-8">
-          <span className="label text-accent font-medium">Core Capabilities</span>
+          <span className="label text-accent font-medium uppercase tracking-widest text-xs">Core Capabilities</span>
           <h2 className="display mt-4 text-[clamp(2.2rem,5.5vw,4.5rem)] leading-none">
-            Expertise
+            What We Shape
           </h2>
         </div>
         <p className="prose-lg text-muted text-lg md:col-span-4 leading-relaxed md:pt-8">
-          Every space presents a unique opportunity—to understand its context, define its purpose, and shape experiences that endure.
+          We shape spaces with clarity, purpose, and a deep understanding of how they are experienced and lived.
         </p>
       </div>
 
