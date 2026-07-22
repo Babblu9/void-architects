@@ -85,15 +85,7 @@ export default function Hero() {
         </div>
       ))}
 
-      {/* Top meta row */}
-      <div className="mx-auto flex w-full max-w-[1600px] items-start justify-between px-5 pt-28 text-paper md:px-10 md:pt-32">
-        <span className="label text-paper/70">
-          Est. Studio — {SITE.cities.join(" · ")}
-        </span>
-        <span className="label hidden text-paper/70 sm:block">
-          {SITE.coverage}
-        </span>
-      </div>
+
 
       {/* Headline & Carousel Elements */}
       <div className="mx-auto w-full max-w-[1600px] px-5 pb-14 md:px-10 md:pb-16">

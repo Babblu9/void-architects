@@ -89,7 +89,7 @@ export default function Nav({ onDark = false }: { onDark?: boolean }) {
                 : "border-ink text-ink hover:bg-ink hover:text-paper"
             }`}
           >
-            Book 3D consult
+            Book your 3D consultation.
           </Link>
         </nav>
 

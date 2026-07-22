@@ -83,7 +83,7 @@ export default function Studio() {
         <div className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-32">
           <div className="grid gap-12 md:grid-cols-2">
             <div className="reveal flex flex-col border border-line p-8 md:p-12 bg-pure rounded-xl">
-              <span className="label text-accent font-medium">Purpose</span>
+              <span className="label text-accent font-medium">Aspiration</span>
               <h3 className="display mt-4 text-3xl">Vision</h3>
               <p className="prose-lg mt-6 text-lg text-ink-soft leading-relaxed">
                 To create architecture that establishes a lasting relationship between people, place, and experience.
@@ -94,7 +94,7 @@ export default function Studio() {
             </div>
 
             <div className="reveal flex flex-col border border-line p-8 md:p-12 bg-pure rounded-xl">
-              <span className="label text-accent font-medium">Mission</span>
+              <span className="label text-accent font-medium">Commitment</span>
               <h3 className="display mt-4 text-3xl">Mission</h3>
               <p className="prose-lg mt-6 text-lg text-ink-soft leading-relaxed">
                 To transform ideas into meaningful environments through thoughtful exploration, collaboration, and design excellence.

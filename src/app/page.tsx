@@ -36,30 +36,24 @@ export default function Home() {
       {/* Introduction */}
       <section className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-32">
         <div className="mb-16">
-          <span className="label text-accent font-medium text-xs uppercase tracking-widest font-mono">Locations</span>
-          <h2 className="display mt-4 text-[clamp(2.2rem,5vw,4rem)] leading-none text-ink font-normal tracking-tight">
+          <h2 className="display text-[clamp(2.2rem,5vw,4rem)] leading-none text-ink font-normal tracking-tight">
             The Art of the Space
           </h2>
         </div>
-        <div className="grid gap-10 md:grid-cols-12 md:items-end">
-          <h2 className="display max-w-[20ch] text-[clamp(1.8rem,4.5vw,3.6rem)] md:col-span-8 leading-tight">
-            At Void Architects, we believe architecture is not merely about creating buildings.
-          </h2>
-          <div className="md:col-span-4 flex flex-col gap-6">
-            <p className="prose-lg text-muted text-base leading-relaxed">
-              It is about shaping experiences, defining relationships between people and place, and designing spaces that remain meaningful through time.
-            </p>
-            <p className="prose-lg text-muted text-base leading-relaxed">
-              Every project begins with understanding and evolves through thoughtful exploration, refinement, and execution.
-            </p>
-            <div>
-              <Link
-                href="/the-void"
-                className="inline-block text-sm underline-offset-8 hover:underline text-ink font-medium"
-              >
-                Learn about our studio →
-              </Link>
-            </div>
+        <div className="max-w-[800px] flex flex-col gap-6">
+          <p className="prose-lg text-ink-soft text-lg md:text-xl font-light leading-relaxed">
+            At Void Architects, we believe architecture is not merely about creating buildings. It is about shaping experiences, defining relationships between people and place, and designing spaces that remain meaningful through time.
+          </p>
+          <p className="prose-lg text-muted text-base leading-relaxed">
+            Every project begins with understanding and evolves through thoughtful exploration, refinement, and execution.
+          </p>
+          <div className="mt-4">
+            <Link
+              href="/the-void"
+              className="inline-block text-sm underline-offset-8 hover:underline text-ink font-medium"
+            >
+              Learn about our studio →
+            </Link>
           </div>
         </div>
       </section>
