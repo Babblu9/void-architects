@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { SEO_PAGES } from "@/lib/data";
+import { SEO_PAGES, SITE, waLink } from "@/lib/data";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -52,7 +52,19 @@ export default function Contact() {
     if (!validate()) return;
 
     setIsSubmitting(true);
-    // Simulate submission animation
+
+    const enquiryMsg = waLink(
+      `Hi ${SITE.name}, I have a project enquiry:\n` +
+        `• Name: ${form.name}\n` +
+        `• Email: ${form.email}\n` +
+        `• Phone: ${form.phone}\n` +
+        `• Location: ${form.location}\n` +
+        `• Project Type: ${form.projectType}\n` +
+        `• Message: ${form.message}`
+    );
+
+    window.open(enquiryMsg, "_blank");
+
     setTimeout(() => {
       setIsSubmitting(false);
       setSuccess(true);
@@ -64,7 +76,7 @@ export default function Contact() {
         location: "",
         message: "",
       });
-    }, 1500);
+    }, 800);
   };
 
   return (
@@ -113,8 +125,8 @@ export default function Contact() {
             <div className="border-t border-paper/10 pt-8">
               <h3 className="label text-accent font-semibold mb-4">Connect</h3>
               <div className="flex flex-col gap-3">
-                <a href="mailto:designd@voidarchitects.space" className="text-lg text-paper/80 hover:text-paper hover:underline">
-                  designd@voidarchitects.space
+                <a href="mailto:design@voidarchitects.space" className="text-lg text-paper/80 hover:text-paper hover:underline">
+                  design@voidarchitects.space
                 </a>
                 <a href="tel:+917702831717" className="text-sm text-paper/60 hover:text-paper">
                   +91 77028 31717

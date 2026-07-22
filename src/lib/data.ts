@@ -8,7 +8,7 @@ export const SITE = {
   cities: ["Hyderabad", "Madhapur"], // office locations
   coverage: "Telangana & across India",
   phone: "+91 77028 31717",
-  email: "designd@voidarchitects.space",
+  email: "design@voidarchitects.space",
   whatsapp: "917702831717",
   url: "https://voidarchitects.in",
   description:
