@@ -2,31 +2,26 @@ import Image from "next/image";
 
 const EXPERTISES = [
   {
-    index: "01",
     title: "Architecture",
     description: "We design architecture that responds thoughtfully to its environment, balancing form, function, and material expression.",
     image: "/projects/lbs-school.jpg",
   },
   {
-    index: "02",
     title: "Interior Environments",
     description: "Interiors are where architecture becomes personal. Through a careful dialogue between light, materiality, proportion, and detail, we create environments that elevate everyday experiences.",
     image: "/projects/sridhar.jpg",
   },
   {
-    index: "03",
     title: "Master Planning",
     description: "Meaningful spaces begin with meaningful frameworks. We develop master plans that organise movement, establish identity, and anticipate future possibilities.",
     image: "/projects/nit-warangal.jpg",
   },
   {
-    index: "04",
     title: "Landscape Design",
     description: "Landscape is not an addition to architecture—it is an integral part of it. We design outdoor environments that foster harmony between the built and the natural.",
     image: "/projects/harsha.jpg",
   },
   {
-    index: "05",
     title: "Spatial Strategy",
     description: "Beyond buildings and interiors, we explore how space influences behaviour, experience, and identity. Our spatial strategies shape environments that are intuitive, adaptable, and meaningful.",
     image: "/projects/dr-raos-clinic.jpg",
@@ -51,7 +46,7 @@ export default function Services() {
       <div className="flex flex-col">
         {EXPERTISES.map((s, i) => (
           <div
-            key={s.index}
+            key={s.title}
             className={`grid items-center gap-8 border-t border-line py-12 md:grid-cols-2 md:gap-16 md:py-16 ${
               i % 2 === 1 ? "md:[direction:rtl]" : ""
             }`}
@@ -69,8 +64,7 @@ export default function Services() {
             </div>
             {/* Text */}
             <div className="[direction:ltr]">
-              <span className="label text-accent font-mono font-medium">{s.index}</span>
-              <h3 className="display mt-5 text-[clamp(1.8rem,4.5vw,3rem)]">
+              <h3 className="display text-[clamp(1.8rem,4.5vw,3rem)]">
                 {s.title}
               </h3>
               <p className="prose-lg mt-6 text-base text-ink-soft leading-relaxed">{s.description}</p>

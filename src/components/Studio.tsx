@@ -2,27 +2,22 @@ import Image from "next/image";
 
 const PRINCIPLES = [
   {
-    no: "01",
     title: "Context",
     description: "Understanding every site's unique identity and cultural narrative.",
   },
   {
-    no: "02",
     title: "Materiality",
     description: "Exploring materials as a means of expression, creating depth, character, and permanence.",
   },
   {
-    no: "03",
     title: "Light",
     description: "Using natural light to shape atmosphere, movement, and emotional experience.",
   },
   {
-    no: "04",
     title: "Experience",
     description: "Designing spaces that connect with people and create lasting impressions.",
   },
   {
-    no: "05",
     title: "Timelessness",
     description: "Creating architecture that remains meaningful beyond trends and generations.",
   },
@@ -164,9 +159,8 @@ export default function Studio() {
           </h3>
           <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
             {PRINCIPLES.map((p) => (
-              <div key={p.no} className="reveal flex flex-col border-t border-line pt-6">
-                <span className="label text-muted">{p.no}</span>
-                <h4 className="display mt-4 text-xl lg:text-2xl">{p.title}</h4>
+              <div key={p.title} className="reveal flex flex-col border-t border-line pt-6">
+                <h4 className="display text-xl lg:text-2xl">{p.title}</h4>
                 <p className="prose-lg mt-4 text-sm text-muted leading-relaxed">{p.description}</p>
               </div>
             ))}

@@ -2,17 +2,14 @@ import { PROCESS } from "@/lib/data";
 
 const PROCESS_PHASES = [
   {
-    index: "01",
     title: "We Design.",
     description: "Transforming ideas into thoughtful spatial concepts.",
   },
   {
-    index: "02",
     title: "We Develop.",
     description: "Refining concepts through detail, materiality, and technical precision.",
   },
   {
-    index: "03",
     title: "We Deliver.",
     description: "Bringing architecture to life through collaboration and execution.",
   },
@@ -43,11 +40,8 @@ export default function Approach() {
       <div className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-32 border-b border-line mt-12">
         <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
           {PROCESS.map((step) => (
-            <div key={step.no} className="reveal border-t border-ink pt-6 flex flex-col justify-between min-h-[160px]">
-              <div>
-                <span className="label text-muted">{step.no}</span>
-                <h3 className="display mt-4 text-2xl lg:text-3xl">{step.title}</h3>
-              </div>
+            <div key={step.no} className="reveal border-t border-ink pt-6 flex flex-col justify-between min-h-[120px]">
+              <h3 className="display text-2xl lg:text-3xl">{step.title}</h3>
               <p className="prose-lg mt-4 text-sm text-muted leading-relaxed">{step.text}</p>
             </div>
           ))}
@@ -63,9 +57,8 @@ export default function Approach() {
           </h3>
           <div className="grid gap-8 md:grid-cols-3">
             {PROCESS_PHASES.map((phase) => (
-              <div key={phase.index} className="reveal flex flex-col border border-line p-8 md:p-12 bg-pure rounded-xl transition-all duration-500 hover:shadow-lg">
-                <span className="label text-muted font-mono">{phase.index}</span>
-                <h4 className="display mt-6 text-2xl lg:text-3xl">{phase.title}</h4>
+              <div key={phase.title} className="reveal flex flex-col border border-line p-8 md:p-12 bg-pure rounded-xl transition-all duration-500 hover:shadow-lg">
+                <h4 className="display text-2xl lg:text-3xl">{phase.title}</h4>
                 <p className="prose-lg mt-4 text-sm text-muted leading-relaxed">{phase.description}</p>
               </div>
             ))}

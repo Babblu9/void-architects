@@ -67,8 +67,7 @@ export default function Home() {
           <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
             {CRAFT.map((item, idx) => (
               <div key={idx} className="reveal flex flex-col border-l border-line pl-6 transition-colors hover:border-ink duration-500">
-                <span className="label text-muted">0{idx + 1}</span>
-                <h3 className="display mt-4 text-2xl lg:text-3xl">{item.title}</h3>
+                <h3 className="display text-2xl lg:text-3xl">{item.title}</h3>
                 <p className="prose-lg mt-4 text-sm text-muted leading-relaxed">{item.description}</p>
               </div>
             ))}
