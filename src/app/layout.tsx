@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import { Hanken_Grotesk, Archivo_Black } from "next/font/google";
+import { Hanken_Grotesk, Archivo_Black, Alex_Brush } from "next/font/google";
 import "./globals.css";
 import Cursor from "@/components/Cursor";
 import { SITE } from "@/lib/data";
 
-// Display: Archivo Black — monumental grotesque, reads like architectural
-// signage / building nameplates. Body: Hanken Grotesk — a refined, slightly
-// warm grotesque with excellent text texture. Contrast by weight + character.
 const display = Archivo_Black({
   variable: "--font-display",
   subsets: ["latin"],
@@ -18,6 +15,13 @@ const sans = Hanken_Grotesk({
   variable: "--font-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
+  display: "swap",
+});
+
+const signature = Alex_Brush({
+  variable: "--font-signature",
+  subsets: ["latin"],
+  weight: "400",
   display: "swap",
 });
 
@@ -78,7 +82,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${display.variable} ${sans.variable} h-full`}
+      className={`${display.variable} ${sans.variable} ${signature.variable} h-full`}
     >
       <body className="flex min-h-full flex-col">
         <script

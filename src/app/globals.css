@@ -31,6 +31,7 @@
   --color-accent: var(--accent);
   --font-display: var(--font-display);
   --font-sans: var(--font-sans);
+  --font-signature: var(--font-signature);
 }
 
 * {
@@ -180,4 +181,8 @@ body {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .marquee { animation: none; }
+}
+
+.font-signature {
+  font-family: var(--font-signature), cursive;
 }

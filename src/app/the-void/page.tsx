@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import PageShell from "@/components/PageShell";
 import Studio from "@/components/Studio";
-import Stats from "@/components/Stats";
 
 export const metadata: Metadata = {
   title: "The Void",
@@ -14,7 +13,6 @@ export default function TheVoidPage() {
   return (
     <PageShell>
       <Studio />
-      <Stats />
     </PageShell>
   );
 }

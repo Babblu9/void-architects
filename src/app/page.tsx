@@ -3,6 +3,7 @@ import Image from "next/image";
 import PageShell from "@/components/PageShell";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
+import Testimonials from "@/components/Testimonials";
 import { PROJECTS } from "@/lib/data";
 
 const featured = PROJECTS.slice(0, 3);
@@ -181,6 +182,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Testimonials />
 
       {/* Closing Statement */}
       <section className="border-t border-line bg-paper-2">
