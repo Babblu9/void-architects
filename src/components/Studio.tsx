@@ -27,16 +27,16 @@ export default function Studio() {
   return (
     <section id="studio" className="border-t border-line">
       {/* Hero / Intro Title */}
-      <div className="mx-auto max-w-[1600px] px-5 pt-24 md:px-10 md:pt-36">
-        <div className="reveal flex flex-col gap-10 md:gap-16">
-          <h2 className="display text-[clamp(2.2rem,5vw,4.5rem)] max-w-[20ch] leading-tight">
+      <div className="mx-auto max-w-[1600px] px-5 pt-24 md:px-10 md:pt-36 flex flex-col items-center text-center">
+        <div className="reveal flex flex-col items-center gap-10 md:gap-12 max-w-[950px]">
+          <h2 className="display text-[clamp(2.2rem,5vw,4.5rem)] leading-tight">
             Architecture Begins by Understanding Space.
           </h2>
-          <div className="flex flex-col gap-8 max-w-[900px]">
+          <div className="flex flex-col items-center gap-8 max-w-[850px]">
             <p className="text-xl md:text-2xl font-light text-ink-soft leading-relaxed">
               Space is the foundation of architecture. It defines how light enters, how people move, and how experiences unfold. Before form, material, or structure, there is an understanding of place, purpose, and possibility.
             </p>
-            <p className="text-base text-muted leading-relaxed ml-12 md:ml-28 max-w-[640px]">
+            <p className="text-base text-muted leading-relaxed max-w-[640px]">
               At Void Architects, we believe great architecture is not merely designed—it is discovered through curiosity, collaboration, and thoughtful refinement.
             </p>
           </div>
