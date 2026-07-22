@@ -132,17 +132,17 @@ export const PROJECTS: Project[] = [
       "A contemporary-minimal urology & gastroenterology clinic — clean lines, warm textures and glass partitions folding a full care journey into a compact, healing space.",
   },
   {
-    slug: "sree-mathrushri-college",
-    title: "Sree Mathrushri College",
+    slug: "sri-matru-sri-college",
+    title: "Sri Matru Sri College",
     category: "Institutional",
     location: "Hanamkonda",
     year: "2024",
     area: "6,150 sq.ft.",
-    image: "/projects/matrusri.jpg",
+    image: "/projects/mathrushri-college.jpg",
     w: 2000,
-    h: 1449,
+    h: 1500,
     blurb:
-      "A contemporary-minimal degree college for a girls' campus — rectilinear design principles giving an affordable build a strong, well-balanced commercial identity.",
+      "A contemporary-minimal degree college building — clean geometry and modern facade design creating a well-balanced commercial and academic identity.",
   },
   {
     slug: "harsha-residence",
@@ -184,17 +184,17 @@ export const PROJECTS: Project[] = [
       "Modern institutional interiors built for collaboration — maximised space, durable materials and brand identity woven into an inspiring, welcoming campus.",
   },
   {
-    slug: "dr-v-ramesh-skin-clinic",
-    title: "Dr V Ramesh Skin Clinic",
+    slug: "dr-raos-clinic",
+    title: "Dr. Rao's ENT & Dental Care",
     category: "Healthcare",
     location: "Warangal",
     year: "2024",
     area: "3,200 sq.ft.",
-    image: "/projects/v-ramesh.jpg",
+    image: "/projects/dr-raos-clinic.jpg",
     w: 2000,
-    h: 1500,
+    h: 1250,
     blurb:
-      "A contemporary-minimal dermatology clinic balancing strict clinical hygiene with a warm, spa-like calm — hospitality-inspired planning and biophilic materiality.",
+      "A contemporary ENT and dental care clinic combining clinical excellence with a welcoming, modern aesthetic designed for patient comfort and clean workflows.",
   },
 ];
 
@@ -233,7 +233,7 @@ export const TESTIMONIALS: Testimonial[] = [
       "From concept to completion, the team understood our requirements perfectly. A perfect blend of functionality, elegance and contemporary architecture — thank you, VOID Architects, for bringing our vision to life.",
     author: "Mr Ugender",
     role: "M.Tech Gold Medalist, Osmania University",
-    project: "Sree Mathrushri College",
+    project: "Sri Matru Sri College",
   },
   {
     quote:
@@ -265,10 +265,10 @@ export const TESTIMONIALS: Testimonial[] = [
 export const CLIENTS = [
   "NIT Warangal · CPWD",
   "LBS School",
-  "Sree Mathrushri Degree College",
+  "Sri Matru Sri College",
   "SpinLaunch",
   "Kiran Kidney Care",
-  "Dr V Ramesh Skin Clinic",
+  "Dr. Rao's ENT & Dental Care",
   "Pothunuri Convention Hall",
   "Dr Sree Reddy",
 ];

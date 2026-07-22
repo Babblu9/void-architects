@@ -29,7 +29,7 @@ const EXPERTISES = [
     index: "05",
     title: "Spatial Strategy",
     description: "Beyond buildings and interiors, we explore how space influences behaviour, experience, and identity. Our spatial strategies shape environments that are intuitive, adaptable, and meaningful.",
-    image: "/projects/v-ramesh.jpg",
+    image: "/projects/dr-raos-clinic.jpg",
   },
 ];
 
