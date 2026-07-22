@@ -23,8 +23,8 @@ export default function Approach() {
         <div className="reveal grid gap-10 md:grid-cols-12">
           <div className="md:col-span-8">
             <span className="label text-accent font-medium">Methodology</span>
-            <h2 className="display mt-4 text-[clamp(2.2rem,5.5vw,4.5rem)] leading-none lowercase">
-              understanding space
+            <h2 className="display mt-4 text-[clamp(2.2rem,5.5vw,4.5rem)] leading-none">
+              Understanding Space
             </h2>
             <p className="text-xl md:text-3xl mt-8 font-light text-ink-soft leading-relaxed max-w-[32ch]">
               Every meaningful space begins with understanding.
