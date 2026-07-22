@@ -31,7 +31,17 @@ export default function Home() {
   return (
     <PageShell onDark padTop={false}>
       <Hero />
-      <Marquee />
+
+      {/* The Art of the Space */}
+      <section className="bg-ink border-t border-line text-paper pt-16 md:pt-24 pb-0">
+        <div className="mx-auto max-w-[1600px] px-5 md:px-10 mb-8">
+          <span className="label text-accent font-medium text-xs uppercase tracking-widest font-mono">Locations</span>
+          <h2 className="display mt-4 text-[clamp(2.2rem,5vw,4rem)] leading-none text-paper font-normal tracking-tight">
+            The Art of the Space
+          </h2>
+        </div>
+        <Marquee />
+      </section>
 
       {/* Introduction */}
       <section className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-32">
@@ -106,7 +116,7 @@ export default function Home() {
                   href="/approach"
                   className="inline-block text-sm underline-offset-8 hover:underline text-ink font-medium"
                 >
-                  Our full process →
+                  Our approach →
                 </Link>
               </div>
             </div>

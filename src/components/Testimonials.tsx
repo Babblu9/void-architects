@@ -26,9 +26,9 @@ export default function Testimonials() {
           <Reveal>
             <span className="label text-muted text-xs uppercase tracking-widest font-mono">Testimonials</span>
             <h2 className="display mt-4 text-[clamp(2.2rem,5vw,4rem)] leading-none text-ink font-normal tracking-tight">
-              Don&rsquo;t take our word for it!
+              Spaces are best described by
               <br />
-              Hear it from our partners.
+              those who inhabit them.
             </h2>
           </Reveal>
           

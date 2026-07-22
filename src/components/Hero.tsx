@@ -107,9 +107,6 @@ export default function Hero() {
                   : "translate-y-8 opacity-0 pointer-events-none"
               }`}
             >
-              <span className="text-paper/40 font-mono text-[0.45em] align-top mr-4">
-                {slide.id}
-              </span>
               {slide.title}
             </h1>
           ))}
@@ -130,16 +127,9 @@ export default function Hero() {
                   onClick={() => {
                     setActiveSlide(idx);
                   }}
-                  className="group flex flex-col items-start gap-1.5 py-2 text-left cursor-pointer"
+                  className="group flex flex-col items-start gap-1.5 py-4 text-left cursor-pointer"
                   aria-label={`Go to slide ${slide.id}`}
                 >
-                  <span
-                    className={`text-[10px] font-mono tracking-wider transition-colors duration-300 ${
-                      activeSlide === idx ? "text-paper" : "text-paper/40 group-hover:text-paper/70"
-                    }`}
-                  >
-                    {slide.id}
-                  </span>
                   <div className="h-[2px] w-10 bg-paper/20 relative rounded-full overflow-hidden">
                     <div
                       className="absolute left-0 top-0 h-full bg-paper rounded-full transition-all ease-linear"

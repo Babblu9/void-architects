@@ -1,11 +1,8 @@
 const WORDS = [
-  "Hyderabad",
+  "Hanamkonda",
+  "Warangal",
   "Madhapur",
-  "Telangana",
-  "India",
-  "Architecture",
-  "Interiors",
-  "Design",
+  "Hyderabad",
 ];
 
 // Full-bleed running band. Two identical tracks → seamless -50% loop.

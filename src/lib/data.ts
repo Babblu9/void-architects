@@ -68,7 +68,7 @@ export type Project = {
 export const PROJECTS: Project[] = [
   {
     slug: "nit-warangal-entrance",
-    title: "The prestigious entrance of NIT(National Institute of Technology) Warangal",
+    title: "The Iconic Entrance of the National Institute of Technology, Warangal",
     category: "Institutional & Landscape",
     location: "Warangal",
     year: "2024",
@@ -81,9 +81,9 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "dr-sree-reddy-residence",
-    title: "Dr Sree Reddy Residence",
-    category: "Residential",
-    location: "Warangal",
+    title: "Dr. Sree Reddy Residence",
+    category: "Private Residence",
+    location: "Hanamkonda",
     year: "2024",
     area: "3,375 sq.ft.",
     image: "/projects/sree-reddy.jpg",
@@ -95,7 +95,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "pothunuri-convention-hall",
     title: "Pothunuri Convention Hall",
-    category: "Commercial",
+    category: "Convention & Event Space",
     location: "Warangal",
     year: "2025",
     area: "9,125 sq.ft.",
@@ -211,24 +211,24 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     quote:
       "The design perfectly balances contemporary minimalism with regional heritage, resulting in an iconic campus entrance. We appreciate the creativity, attention to detail, and professional execution delivered by VOID Architects.",
-    author: "CPWD",
-    role: "National Institute of Technology, Warangal",
-    project: "The prestigious entrance of NIT(National Institute of Technology) Warangal",
+    author: "Central Public Works Department (CPWD)",
+    role: "Government Liaison Representative",
+    project: "The Iconic Entrance of the National Institute of Technology, Warangal",
     image: "/projects/nit-warangal.jpg",
   },
   {
     quote:
-      "VOID Architects transformed our vision into a beautiful contemporary home. Every space is thoughtfully planned with excellent natural lighting, ventilation and functionality. The final design exceeded our expectations.",
+      "VOID Architects transformed our vision into a beautiful contemporary home. Every space is thoughtfully planned with excellent natural lighting, ventilation and functionality.",
     author: "Dr Sree Reddy",
     role: "MBBS, MCh (USA)",
-    project: "Dr Sree Reddy Residence",
+    project: "Dr. Sree Reddy Residence",
     image: "/projects/sree-reddy.jpg",
   },
   {
     quote:
       "The final outcome exceeded our expectations. The design feels premium, functional and timeless — exactly what we envisioned: a contemporary, elegant and efficient healthcare environment.",
-    author: "Dr Uske Kiran",
-    role: "MS, MCh Urology — Gold Medalist",
+    author: "Dr. Uske Kiran",
+    role: "M.S., M.Ch. (Urology) • Gold Medalist",
     project: "Kiran Kidney Care",
     image: "/projects/kiran-kidney.jpg",
   },
@@ -255,14 +255,6 @@ export const TESTIMONIALS: Testimonial[] = [
     role: "Probationary Officer, SBI",
     project: "Sridhar Residence Interiors",
     image: "/projects/sridhar.jpg",
-  },
-  {
-    quote:
-      "A perfect blend of aesthetics and functionality. The collaborative zones have completely changed how our team interacts — the modern campus interiors feel welcoming and have noticeably boosted engagement.",
-    author: "Mr Anil Kumar Nelagapudi",
-    role: "SpinLaunch",
-    project: "SpinLaunch Campus",
-    image: "/projects/spinlaunch.jpg",
   },
 ];
 
