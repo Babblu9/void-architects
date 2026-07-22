@@ -32,7 +32,7 @@ export default function Studio() {
           <h2 className="display text-[clamp(2.2rem,5vw,4.5rem)] md:col-span-8 leading-tight">
             Architecture Begins by Understanding Space.
           </h2>
-          <div className="prose-lg flex flex-col gap-6 text-lg text-ink-soft md:col-span-4 justify-end">
+          <div className="prose-lg flex flex-col gap-6 text-lg text-ink-soft md:col-span-4 md:pt-4">
             <p className="font-light leading-relaxed">
               Space is the foundation of architecture. It defines how light enters, how people move, and how experiences unfold. Before form, material, or structure, there is an understanding of place, purpose, and possibility.
             </p>
