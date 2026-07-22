@@ -1,23 +1,57 @@
 import Image from "next/image";
-import { SERVICES } from "@/lib/data";
+
+const EXPERTISES = [
+  {
+    index: "01",
+    title: "Architecture",
+    description: "We design architecture that responds thoughtfully to its environment, balancing form, function, and material expression.",
+    image: "/projects/lbs-school.jpg",
+  },
+  {
+    index: "02",
+    title: "Interior Environments",
+    description: "Interiors are where architecture becomes personal. Through a careful dialogue between light, materiality, proportion, and detail, we create environments that elevate everyday experiences.",
+    image: "/projects/sridhar.jpg",
+  },
+  {
+    index: "03",
+    title: "Master Planning",
+    description: "Meaningful spaces begin with meaningful frameworks. We develop master plans that organise movement, establish identity, and anticipate future possibilities.",
+    image: "/projects/nit-warangal.jpg",
+  },
+  {
+    index: "04",
+    title: "Landscape Design",
+    description: "Landscape is not an addition to architecture—it is an integral part of it. We design outdoor environments that foster harmony between the built and the natural.",
+    image: "/projects/harsha.jpg",
+  },
+  {
+    index: "05",
+    title: "Spatial Strategy",
+    description: "Beyond buildings and interiors, we explore how space influences behaviour, experience, and identity. Our spatial strategies shape environments that are intuitive, adaptable, and meaningful.",
+    image: "/projects/v-ramesh.jpg",
+  },
+];
 
 export default function Services() {
   return (
-    <section id="services" className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-36">
+    <section id="expertise" className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-36">
       <div className="reveal mb-20 grid gap-8 md:grid-cols-12 md:items-end">
-        <h2 className="display max-w-[16ch] text-[clamp(2rem,5.5vw,4.5rem)] md:col-span-8">
-          Three disciplines, one hand.
-        </h2>
-        <p className="prose-lg text-muted md:col-span-4">
-          We take a place from the ground up — building, interior and everything
-          between — so the whole reads as a single, quiet idea.
+        <div className="md:col-span-8">
+          <span className="label text-accent font-medium">Core Capabilities</span>
+          <h2 className="display mt-4 text-[clamp(2.2rem,5.5vw,4.5rem)] leading-none">
+            Expertise
+          </h2>
+        </div>
+        <p className="prose-lg text-muted text-lg md:col-span-4 leading-relaxed md:pt-8">
+          Every space presents a unique opportunity—to understand its context, define its purpose, and shape experiences that endure.
         </p>
       </div>
 
       <div className="flex flex-col">
-        {SERVICES.map((s, i) => (
+        {EXPERTISES.map((s, i) => (
           <div
-            key={s.key}
+            key={s.index}
             className={`grid items-center gap-8 border-t border-line py-12 md:grid-cols-2 md:gap-16 md:py-16 ${
               i % 2 === 1 ? "md:[direction:rtl]" : ""
             }`}
@@ -31,18 +65,30 @@ export default function Services() {
                 sizes="(min-width: 768px) 50vw, 100vw"
                 className="object-cover"
               />
+              <div className="absolute inset-0 bg-ink/5" />
             </div>
             {/* Text */}
             <div className="[direction:ltr]">
-              <span className="label text-accent">{s.index}</span>
-              <h3 className="display mt-5 text-[clamp(2rem,4.5vw,3.5rem)]">
+              <span className="label text-accent font-mono font-medium">{s.index}</span>
+              <h3 className="display mt-5 text-[clamp(1.8rem,4.5vw,3rem)]">
                 {s.title}
               </h3>
-              <p className="prose-lg mt-6 text-lg text-ink-soft">{s.blurb}</p>
+              <p className="prose-lg mt-6 text-base text-ink-soft leading-relaxed">{s.description}</p>
             </div>
           </div>
         ))}
       </div>
+
+      {/* Closing Statement */}
+      <div className="border-t border-line mt-16 pt-16 text-center">
+        <p className="text-xl md:text-2xl font-light text-ink-soft max-w-[36ch] mx-auto leading-relaxed">
+          Across every scale and discipline, our pursuit remains the same—to create spaces rooted in context, defined by purpose, and remembered for the experiences they inspire.
+        </p>
+        <p className="label mt-8 text-accent font-semibold tracking-widest">
+          Thoughtfully designed. Precisely crafted. Timelessly experienced.
+        </p>
+      </div>
     </section>
   );
 }
+

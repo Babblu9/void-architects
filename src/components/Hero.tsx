@@ -8,19 +8,19 @@ import { SITE } from "@/lib/data";
 const SLIDES = [
   {
     id: "01",
-    title: "Speaking Through Spaces.",
+    title: "Void is Where Architecture Begins.",
     image: "/projects/nit-warangal.jpg",
     alt: "Void Architects' monumental campus gateway design for NIT Warangal at dusk",
   },
   {
     id: "02",
-    title: "Embracing Absence. Honoring Silence.",
+    title: "Spaces That Speak Without Words.",
     image: "/projects/sree-reddy.jpg",
     alt: "Dr Sree Reddy Residence by Void Architects — contemporary tropical-minimalist duplex at dusk",
   },
   {
     id: "03",
-    title: "Leaving Lasting Signatures.",
+    title: "Designed to Endure. Crafted to Inspire.",
     image: "/projects/pothunuri.jpg",
     alt: "Pothunuri Convention Hall by Void Architects — contemporary luxury convention hall",
   },
@@ -155,16 +155,16 @@ export default function Hero() {
 
             <div className="flex items-center gap-6">
               <Link
-                href="/estimate"
+                href="/contact"
                 className="rounded-full bg-paper px-7 py-3 text-sm font-medium text-ink transition-transform duration-500 hover:-translate-y-0.5"
               >
-                Get a free estimate
+                Start a conversation
               </Link>
               <Link
-                href="/clients"
+                href="/selected-signatures"
                 className="text-sm text-paper underline-offset-8 hover:underline"
               >
-                Selected work
+                Selected signatures
               </Link>
             </div>
           </div>

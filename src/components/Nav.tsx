@@ -8,12 +8,13 @@ import { SITE } from "@/lib/data";
 
 const LINKS = [
   { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
-  { href: "/studio", label: "Studio" },
-  { href: "/clients", label: "Work & Clients" },
-  { href: "/estimate", label: "Free estimate" },
+  { href: "/the-void", label: "The Void" },
+  { href: "/expertise", label: "Expertise" },
+  { href: "/approach", label: "Approach" },
+  { href: "/selected-signatures", label: "Selected Signatures" },
   { href: "/contact", label: "Contact" },
 ];
+
 
 export default function Nav({ onDark = false }: { onDark?: boolean }) {
   const [scrolled, setScrolled] = useState(false);

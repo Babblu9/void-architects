@@ -9,20 +9,20 @@ const featured = PROJECTS.slice(0, 3);
 
 const CRAFT = [
   {
-    title: "Architectural Experiences",
-    description: "Spaces shaped by purpose, proportion, materiality, and the character of place.",
-  },
-  {
-    title: "Spatial Strategies",
-    description: "Thoughtful frameworks that guide growth, identity, and meaningful experiences.",
+    title: "Architecture",
+    description: "Spaces shaped by purpose, proportion, context, and timeless design.",
   },
   {
     title: "Interior Environments",
-    description: "Interiors composed through a dialogue of light, texture, and timeless detail.",
+    description: "Interiors that celebrate light, materiality, and the art of thoughtful living.",
   },
   {
-    title: "Landscape Connections",
-    description: "Harmonious relationships between built form, nature, and human experience.",
+    title: "Master Planning",
+    description: "Spatial frameworks designed to guide growth, movement, and meaningful connections.",
+  },
+  {
+    title: "Landscape Design",
+    description: "Seamlessly integrating architecture and nature to create harmonious environments.",
   },
 ];
 
@@ -32,31 +32,25 @@ export default function Home() {
       <Hero />
       <Marquee />
 
-      {/* Intro: Why Void? */}
+      {/* Introduction */}
       <section className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-32">
-        <div className="grid gap-10 md:grid-cols-12">
-          <div className="md:col-span-6">
-            <span className="label text-accent font-medium">Philosophy</span>
-            <h2 className="display mt-4 text-[clamp(2.2rem,5vw,4.2rem)] leading-none">
-              Why Void?
-            </h2>
-            <p className="text-xl md:text-2xl mt-8 font-light text-ink-soft leading-relaxed">
-              Void is not the absence of space. It is the presence of possibility. It is the pause between elements, the balance between light and shadow, the space that allows architecture to breathe.
-            </p>
-          </div>
-          <div className="md:col-span-5 md:col-start-8 flex flex-col justify-end gap-6 pt-6 md:pt-0">
+        <div className="grid gap-10 md:grid-cols-12 md:items-end">
+          <h2 className="display max-w-[20ch] text-[clamp(1.8rem,4.5vw,3.6rem)] md:col-span-8 leading-tight">
+            At Void Architects, we believe architecture is not merely about creating buildings.
+          </h2>
+          <div className="md:col-span-4 flex flex-col gap-6">
             <p className="prose-lg text-muted text-base leading-relaxed">
-              At Void Architects, we explore the relationship between form and emptiness, creating environments where every element has purpose and every space has meaning.
+              It is about shaping experiences, defining relationships between people and place, and designing spaces that remain meaningful through time.
             </p>
             <p className="prose-lg text-muted text-base leading-relaxed">
-              From intimate residences to institutional environments, we shape spaces where light, material, and human experience come together with intention. Architecture defined by purpose, precision, and permanence.
+              Every project begins with understanding and evolves through thoughtful exploration, refinement, and execution.
             </p>
-            <div className="mt-4">
+            <div>
               <Link
-                href="/studio"
+                href="/the-void"
                 className="inline-block text-sm underline-offset-8 hover:underline text-ink font-medium"
               >
-                About the studio →
+                Learn about our studio →
               </Link>
             </div>
           </div>
@@ -66,7 +60,7 @@ export default function Home() {
       {/* What We Craft */}
       <section className="border-t border-line bg-pure">
         <div className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-32">
-          <span className="label text-accent font-medium">Our Offerings</span>
+          <span className="label text-accent font-medium">Expertise</span>
           <h2 className="display mt-4 mb-16 text-[clamp(2.2rem,5.5vw,4.5rem)]">
             What We Craft
           </h2>
@@ -75,52 +69,101 @@ export default function Home() {
               <div key={idx} className="reveal flex flex-col border-l border-line pl-6 transition-colors hover:border-ink duration-500">
                 <span className="label text-muted">0{idx + 1}</span>
                 <h3 className="display mt-4 text-2xl lg:text-3xl">{item.title}</h3>
-                <p className="prose-lg mt-4 text-sm text-muted">{item.description}</p>
+                <p className="prose-lg mt-4 text-sm text-muted leading-relaxed">{item.description}</p>
               </div>
             ))}
+          </div>
+          <div className="mt-12 text-left">
+            <Link
+              href="/expertise"
+              className="inline-block text-sm underline-offset-8 hover:underline text-ink font-medium"
+            >
+              Explore our expertise page →
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Process Philosophy Band */}
+      {/* We Design. We Develop. We Deliver. */}
       <section className="border-t border-line bg-paper-2">
         <div className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-32">
           <div className="grid gap-8 md:grid-cols-12 md:items-start">
             <div className="md:col-span-5">
-              <span className="label text-accent font-medium">Process Philosophy</span>
+              <span className="label text-accent font-medium">Approach</span>
               <h2 className="display mt-4 text-[clamp(2.2rem,4.5vw,3.5rem)] leading-tight">
                 We Design.<br />We Develop.<br />We Deliver.
               </h2>
             </div>
             <div className="md:col-span-7 md:pt-8">
               <p className="text-xl md:text-2xl font-light text-ink-soft leading-relaxed max-w-[32ch]">
-                From vision to reality, every project is shaped through a considered process of exploration, refinement, and execution.
+                From concept to completion, every project is guided by a process of clarity, collaboration, and craftsmanship.
               </p>
-              <p className="mt-6 text-base text-muted max-w-[40ch]">
-                Creating spaces where ideas become experiences and architecture becomes a lasting expression.
+              <p className="mt-6 text-base text-muted max-w-[40ch] leading-relaxed">
+                We transform ideas into architectural experiences that are precise in execution and enduring in character.
               </p>
+              <div className="mt-8">
+                <Link
+                  href="/approach"
+                  className="inline-block text-sm underline-offset-8 hover:underline text-ink font-medium"
+                >
+                  Our full process →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Void? */}
+      <section className="border-t border-line bg-pure">
+        <div className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-32">
+          <div className="grid gap-10 md:grid-cols-12">
+            <div className="md:col-span-6">
+              <span className="label text-accent font-medium">Philosophy</span>
+              <h2 className="display mt-4 text-[clamp(2.2rem,5vw,4.2rem)] leading-none">
+                Why Void?
+              </h2>
+              <p className="text-xl md:text-2xl mt-8 font-light text-ink-soft leading-relaxed">
+                Void is not the absence of space. It is the presence of possibility. It is the pause between elements, the dialogue between light and shadow, and the space that allows architecture to breathe.
+              </p>
+            </div>
+            <div className="md:col-span-5 md:col-start-8 flex flex-col justify-end gap-6 pt-6 md:pt-0">
+              <p className="prose-lg text-muted text-base leading-relaxed">
+                At Void Architects, we embrace the philosophy that what is left unbuilt can be as meaningful as what is created. Every line, material, and proportion is considered to create environments that inspire connection, reflection, and experience.
+              </p>
+              <div className="border-l border-ink/30 pl-4 py-1 my-2">
+                <p className="text-sm font-medium tracking-wide text-ink-soft uppercase font-mono">
+                  Architecture begins where intention meets space. That is the Void.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Selected Signatures */}
-      <section className="border-t border-line bg-pure">
+      <section className="border-t border-line bg-paper">
         <div className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-32">
-          <div className="mb-12 flex items-end justify-between gap-6">
-            <h2 className="display text-[clamp(1.8rem,4.5vw,3.4rem)]">
-              Selected Signatures
-            </h2>
+          <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div>
+              <span className="label text-accent font-medium">Portfolio</span>
+              <h2 className="display mt-4 text-[clamp(1.8rem,4.5vw,3.4rem)]">
+                Selected Signatures
+              </h2>
+            </div>
             <Link
-              href="/clients"
+              href="/selected-signatures"
               className="whitespace-nowrap text-sm underline-offset-8 hover:underline"
             >
               All projects →
             </Link>
           </div>
+          <p className="prose-lg mb-12 text-muted leading-relaxed max-w-[50ch]">
+            Every space begins as an idea and becomes an experience. Our work is a collection of thoughtful responses to context, purpose, and human experience—each one carrying its own architectural signature.
+          </p>
           <div className="grid gap-6 md:grid-cols-3">
             {featured.map((p) => (
-              <Link key={p.slug} href="/clients" className="group block">
+              <Link key={p.slug} href="/selected-signatures" className="group block">
                 <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
                   <Image
                     src={p.image}
@@ -132,11 +175,23 @@ export default function Home() {
                 </div>
                 <h3 className="display mt-4 text-xl md:text-2xl">{p.title}</h3>
                 <p className="mt-1 text-sm text-muted">
-                  {p.category} · {p.location.split(",").pop()}
+                  {p.category} · {p.location}
                 </p>
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Closing Statement */}
+      <section className="border-t border-line bg-paper-2">
+        <div className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-28 text-center">
+          <p className="text-xl md:text-3xl font-light text-ink-soft leading-relaxed max-w-[36ch] mx-auto">
+            From intimate residences to institutional environments, we create architecture that responds to its context, enriches human experience, and leaves a lasting signature.
+          </p>
+          <p className="label mt-8 text-accent text-sm font-semibold tracking-widest">
+            Void Architects — Designing Spaces. Defining Experiences.
+          </p>
         </div>
       </section>
 
@@ -148,16 +203,10 @@ export default function Home() {
           </h2>
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/estimate"
+              href="/contact"
               className="rounded-full bg-paper px-7 py-3 text-sm font-medium text-ink transition-transform hover:-translate-y-0.5"
             >
-              Get a free estimate
-            </Link>
-            <Link
-              href="/contact"
-              className="rounded-full border border-paper/60 px-7 py-3 text-sm transition-colors hover:bg-paper/10"
-            >
-              Contact the studio
+              Start a conversation
             </Link>
           </div>
         </div>
@@ -165,4 +214,5 @@ export default function Home() {
     </PageShell>
   );
 }
+
 

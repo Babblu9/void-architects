@@ -26,11 +26,10 @@ export default function Portfolio() {
       <div className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-36">
         <div className="reveal mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <h2 className="display text-[clamp(2rem,5.5vw,4.5rem)]">
-            Selected work
+            Selected Signatures
           </h2>
-          <p className="prose-lg max-w-[34ch] text-muted">
-            A ledger of built projects across Telangana &amp; India — homes,
-            workplaces and the spaces between.
+          <p className="prose-lg max-w-[45ch] text-muted leading-relaxed">
+            Every space begins as an idea and becomes an experience. Our work is a collection of thoughtful responses to context, purpose, and human experience—each one carrying its own architectural signature.
           </p>
         </div>
 
@@ -73,6 +72,16 @@ export default function Portfolio() {
             </li>
           ))}
         </ol>
+
+        {/* Closing Statement */}
+        <div className="border-t border-line mt-20 pt-16 text-center">
+          <p className="text-xl md:text-2xl font-light text-ink-soft max-w-[36ch] mx-auto leading-relaxed">
+            Architecture is not merely what is built. It is what remains—the experiences, memories, and connections that unfold within space.
+          </p>
+          <p className="label mt-8 text-accent font-semibold tracking-widest">
+            Every signature tells its own story.
+          </p>
+        </div>
       </div>
 
       {/* Cursor-following preview (desktop) — sized to each image's ratio */}
