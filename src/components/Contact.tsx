@@ -93,8 +93,8 @@ export default function Contact() {
                   <span className="text-lg font-medium text-paper">Hanmakonda Studio</span>
                   <span className="text-sm text-paper/60">35-7-5/A Jawahar colony Main Road,</span>
                   <span className="text-sm text-paper/60">Gopalpur, Hanmakonda, Telangana</span>
-                  <a href="tel:+91XXXXXXXXXX" className="text-sm text-paper/80 hover:text-paper hover:underline mt-1">
-                    +91 XXXXX XXXXX
+                  <a href="tel:+917702831717" className="text-sm text-paper/80 hover:text-paper hover:underline mt-1">
+                    +91 77028 31717
                   </a>
                 </div>
                 {/* Hyderabad */}
@@ -102,8 +102,8 @@ export default function Contact() {
                   <span className="text-lg font-medium text-paper">Hyderabad Studio</span>
                   <span className="text-sm text-paper/60">First Floor, Ganesham Square,</span>
                   <span className="text-sm text-paper/60">Road No. 7, Kakatiya Hills, Madhapur, Hyderabad</span>
-                  <a href="tel:+91XXXXXXXXXX" className="text-sm text-paper/80 hover:text-paper hover:underline mt-1">
-                    +91 XXXXX XXXXX
+                  <a href="tel:+918908939039" className="text-sm text-paper/80 hover:text-paper hover:underline mt-1">
+                    +91 89089 39039
                   </a>
                 </div>
               </div>
@@ -113,11 +113,11 @@ export default function Contact() {
             <div className="border-t border-paper/10 pt-8">
               <h3 className="label text-accent font-semibold mb-4">Connect</h3>
               <div className="flex flex-col gap-3">
-                <a href="mailto:hello@voidarchitects.in" className="text-lg text-paper/80 hover:text-paper hover:underline">
-                  hello@voidarchitects.in
+                <a href="mailto:desig@voidarchitects.space" className="text-lg text-paper/80 hover:text-paper hover:underline">
+                  desig@voidarchitects.space
                 </a>
-                <a href="tel:+91XXXXXXXXXX" className="text-sm text-paper/60 hover:text-paper">
-                  +91 XXXXX XXXXX
+                <a href="tel:+917702831717" className="text-sm text-paper/60 hover:text-paper">
+                  +91 77028 31717
                 </a>
                 <div className="flex gap-6 mt-3 text-sm">
                   <a href="#instagram" className="text-paper/60 hover:text-paper transition-colors">
@@ -152,13 +152,13 @@ export default function Contact() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-                <h4 className="display text-xl mb-2">Enquiry Form</h4>
+              <form onSubmit={handleSubmit} className="grid gap-6 sm:grid-cols-2">
+                <h4 className="display text-xl sm:col-span-2 mb-2">Enquiry Form</h4>
                 
                 {/* Name */}
                 <div className="flex flex-col gap-2">
                   <label htmlFor="name" className="text-xs text-paper/60 uppercase tracking-wider font-mono">
-                    * Name
+                    Name
                   </label>
                   <input
                     type="text"
@@ -175,7 +175,7 @@ export default function Contact() {
                 {/* Email Address */}
                 <div className="flex flex-col gap-2">
                   <label htmlFor="email" className="text-xs text-paper/60 uppercase tracking-wider font-mono">
-                    * Email Address
+                    Email Address
                   </label>
                   <input
                     type="email"
@@ -192,7 +192,7 @@ export default function Contact() {
                 {/* Phone Number */}
                 <div className="flex flex-col gap-2">
                   <label htmlFor="phone" className="text-xs text-paper/60 uppercase tracking-wider font-mono">
-                    * Phone Number
+                    Phone Number
                   </label>
                   <input
                     type="tel"
@@ -206,10 +206,27 @@ export default function Contact() {
                   {errors.phone && <span className="text-xs text-red-400 mt-1">{errors.phone}</span>}
                 </div>
 
-                {/* Project Type */}
+                {/* Project Location */}
                 <div className="flex flex-col gap-2">
+                  <label htmlFor="location" className="text-xs text-paper/60 uppercase tracking-wider font-mono">
+                    Project Location
+                  </label>
+                  <input
+                    type="text"
+                    id="location"
+                    name="location"
+                    value={form.location}
+                    onChange={handleChange}
+                    className="w-full bg-paper/5 border border-paper/15 rounded-lg px-4 py-3 text-sm text-paper focus:outline-none focus:border-paper transition-colors"
+                    placeholder="City / Region"
+                  />
+                  {errors.location && <span className="text-xs text-red-400 mt-1">{errors.location}</span>}
+                </div>
+
+                {/* Project Type */}
+                <div className="flex flex-col gap-2 sm:col-span-2">
                   <label htmlFor="projectType" className="text-xs text-paper/60 uppercase tracking-wider font-mono">
-                    * Project Type
+                    Project Type
                   </label>
                   <select
                     id="projectType"
@@ -228,27 +245,10 @@ export default function Contact() {
                   {errors.projectType && <span className="text-xs text-red-400 mt-1">{errors.projectType}</span>}
                 </div>
 
-                {/* Project Location */}
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="location" className="text-xs text-paper/60 uppercase tracking-wider font-mono">
-                    * Project Location
-                  </label>
-                  <input
-                    type="text"
-                    id="location"
-                    name="location"
-                    value={form.location}
-                    onChange={handleChange}
-                    className="w-full bg-paper/5 border border-paper/15 rounded-lg px-4 py-3 text-sm text-paper focus:outline-none focus:border-paper transition-colors"
-                    placeholder="City / Region"
-                  />
-                  {errors.location && <span className="text-xs text-red-400 mt-1">{errors.location}</span>}
-                </div>
-
                 {/* Message */}
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 sm:col-span-2">
                   <label htmlFor="message" className="text-xs text-paper/60 uppercase tracking-wider font-mono">
-                    * Message
+                    Message
                   </label>
                   <textarea
                     id="message"
@@ -262,13 +262,15 @@ export default function Contact() {
                   {errors.message && <span className="text-xs text-red-400 mt-1">{errors.message}</span>}
                 </div>
 
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="rounded-full bg-paper px-8 py-4 text-sm font-medium text-ink transition-transform hover:-translate-y-0.5 mt-4 disabled:opacity-50 disabled:pointer-events-none cursor-pointer text-center"
-                >
-                  {isSubmitting ? "Submitting..." : "Submit Enquiry"}
-                </button>
+                <div className="sm:col-span-2 mt-4">
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full sm:w-auto rounded-full bg-paper px-8 py-4 text-sm font-medium text-ink transition-transform hover:-translate-y-0.5 disabled:opacity-50 disabled:pointer-events-none cursor-pointer text-center"
+                  >
+                    {isSubmitting ? "Submitting..." : "Submit Enquiry"}
+                  </button>
+                </div>
               </form>
             )}
           </div>

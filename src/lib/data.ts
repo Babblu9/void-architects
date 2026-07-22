@@ -7,9 +7,9 @@ export const SITE = {
   tagline: "Architecture, Interiors & Design",
   cities: ["Hyderabad", "Madhapur"], // office locations
   coverage: "Telangana & across India",
-  phone: "+91 90000 00000",
-  email: "studio@voidarchitects.in",
-  whatsapp: "919000000000",
+  phone: "+91 77028 31717",
+  email: "desig@voidarchitects.space",
+  whatsapp: "917702831717",
   url: "https://voidarchitects.in",
   description:
     "Void Architects is an architecture, interior and design studio delivering projects across Telangana and India, with studios in Hyderabad and Madhapur.",
