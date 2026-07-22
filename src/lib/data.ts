@@ -68,7 +68,7 @@ export type Project = {
 export const PROJECTS: Project[] = [
   {
     slug: "nit-warangal-entrance",
-    title: "NIT Warangal Entrance",
+    title: "The prestigious entrance of NIT(National Institute of Technology) Warangal",
     category: "Institutional & Landscape",
     location: "Warangal",
     year: "2024",
@@ -212,7 +212,7 @@ export const TESTIMONIALS: Testimonial[] = [
       "The design perfectly balances contemporary minimalism with regional heritage, resulting in an iconic campus entrance. We appreciate the creativity, attention to detail, and professional execution delivered by VOID Architects.",
     author: "CPWD",
     role: "National Institute of Technology, Warangal",
-    project: "NIT Warangal Entrance",
+    project: "The prestigious entrance of NIT(National Institute of Technology) Warangal",
   },
   {
     quote:
