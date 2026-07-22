@@ -286,8 +286,8 @@ export type Stat = {
 export const STATS: Stat[] = [
   { value: 200, suffix: "+", label: "Projects delivered" },
   { value: 2.5, decimals: 1, suffix: "M+", label: "Sq. ft. built" },
-  { value: 2014, noCount: true, label: "In practice since" },
-  { value: 26, label: "Cities discovered" },
+  { value: 2015, noCount: true, label: "In practice since" },
+  { value: 14, label: "Cities discovered" },
 ];
 
 export const PROCESS = [

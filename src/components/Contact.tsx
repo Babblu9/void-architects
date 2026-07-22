@@ -90,9 +90,9 @@ export default function Contact() {
               <div className="flex flex-col gap-8 sm:flex-row sm:gap-12 lg:flex-col lg:gap-8">
                 {/* Hanamkonda */}
                 <div className="flex flex-col gap-1.5">
-                  <span className="text-lg font-medium text-paper">Void Studio • Hanamkonda</span>
-                  <span className="text-sm text-paper/60">Hanamkonda, Telangana, India</span>
-                  <span className="text-sm text-paper/40 italic">(Complete Address)</span>
+                  <span className="text-lg font-medium text-paper">Hanmakonda Studio</span>
+                  <span className="text-sm text-paper/60">35-7-5/A Jawahar colony Main Road,</span>
+                  <span className="text-sm text-paper/60">Gopalpur, Hanmakonda, Telangana</span>
                   <a href="tel:+91XXXXXXXXXX" className="text-sm text-paper/80 hover:text-paper hover:underline mt-1">
                     +91 XXXXX XXXXX
                   </a>
