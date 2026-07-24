@@ -48,8 +48,21 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     title: `${SITE.name} — Architecture, Interiors & Design`,
     description: SITE.description,
+    images: [
+      {
+        url: "/projects/nit-warangal.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Void Architects — Architecture, Interiors & Design",
+      },
+    ],
   },
-  twitter: { card: "summary_large_image" },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE.name} — Architecture, Interiors & Design`,
+    description: SITE.description,
+    images: ["/projects/nit-warangal.jpg"],
+  },
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
 };
