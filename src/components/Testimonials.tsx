@@ -33,7 +33,7 @@ export default function Testimonials() {
           </Reveal>
           
           {/* Slider Controls */}
-          <Reveal className="flex gap-3 self-end md:self-auto">
+          <Reveal className="hidden md:flex gap-3 self-end md:self-auto">
             <button
               onClick={() => scroll("left")}
               className="w-12 h-12 rounded-full border border-line flex items-center justify-center hover:bg-ink hover:text-paper transition-colors cursor-pointer text-ink bg-pure"
