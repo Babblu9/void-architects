@@ -116,6 +116,16 @@ export default function Studio() {
         <div className="grid gap-12 md:grid-cols-2">
           {/* Rajesh */}
           <div className="reveal border-t border-ink pt-8 flex flex-col gap-6">
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-paper-2">
+              <Image
+                src="/team/rajesh.png"
+                alt="Rajesh Naik — Chief Space Architect & Founder of Void Architects"
+                fill
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover transition-transform duration-700 hover:scale-105"
+                priority
+              />
+            </div>
             <div className="flex justify-between items-baseline">
               <div>
                 <h4 className="display text-2xl md:text-3xl">Rajesh Naik</h4>
@@ -133,6 +143,16 @@ export default function Studio() {
 
           {/* Anil */}
           <div className="reveal border-t border-ink pt-8 flex flex-col gap-6">
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-paper-2">
+              <Image
+                src="/team/anil.jpg"
+                alt="Anil Kumar Nekkalapudi — Chief Vision Architect & Founder of Void Architects"
+                fill
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover transition-transform duration-700 hover:scale-105"
+                priority
+              />
+            </div>
             <div className="flex justify-between items-baseline">
               <div>
                 <h4 className="display text-2xl md:text-3xl">Anil Kumar Nekkalapudi</h4>
