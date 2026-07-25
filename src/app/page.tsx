@@ -6,7 +6,11 @@ import Marquee from "@/components/Marquee";
 import Testimonials from "@/components/Testimonials";
 import { PROJECTS } from "@/lib/data";
 
-const featured = PROJECTS.slice(0, 3);
+const featured = [
+  PROJECTS.find((p) => p.slug === "lbs-school")!,
+  PROJECTS.find((p) => p.slug === "sridhar-interiors")!,
+  PROJECTS.find((p) => p.slug === "harsha-residence")!,
+];
 
 const CRAFT = [
   {

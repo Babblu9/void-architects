@@ -49,7 +49,23 @@ export default async function SeoPage({
   const local = PROJECTS.filter((p) =>
     p.location.includes(page.city)
   ).slice(0, 3);
-  const projects = local.length ? local : PROJECTS.slice(0, 3);
+
+  // Deterministically shuffle fallback projects using the slug as a seed so
+  // that different SEO landing pages show different project subsets.
+  const getJumbledProjects = (seedSlug: string) => {
+    let hash = 0;
+    for (let i = 0; i < seedSlug.length; i++) {
+      hash += seedSlug.charCodeAt(i);
+    }
+    const startIndex = hash % PROJECTS.length;
+    const jumbled: typeof PROJECTS = [];
+    for (let i = 0; i < PROJECTS.length; i++) {
+      jumbled.push(PROJECTS[(startIndex + i) % PROJECTS.length]);
+    }
+    return jumbled.slice(0, 3);
+  };
+
+  const projects = local.length ? local : getJumbledProjects(page.slug);
 
   const jsonLd = {
     "@context": "https://schema.org",

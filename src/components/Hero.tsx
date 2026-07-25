@@ -9,19 +9,19 @@ const SLIDES = [
   {
     id: "01",
     title: "Void is Where Architecture Begins.",
-    image: "/projects/nit-warangal.jpg",
+    image: "/projects/nit-warangal-2.jpg",
     alt: "Void Architects' monumental campus gateway design for NIT Warangal at dusk",
   },
   {
     id: "02",
     title: "Spaces That Speak Without Words.",
-    image: "/projects/sree-reddy.jpg",
+    image: "/projects/sree-reddy-v1.jpg",
     alt: "Dr Sree Reddy Residence by Void Architects — contemporary tropical-minimalist duplex at dusk",
   },
   {
     id: "03",
     title: "Designed to Endure. Crafted to Inspire.",
-    image: "/projects/pothunuri.jpg",
+    image: "/projects/pothunuri-v1.jpg",
     alt: "Pothunuri Convention Hall by Void Architects — contemporary luxury convention hall",
   },
 ];

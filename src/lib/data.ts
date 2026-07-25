@@ -214,7 +214,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Central Public Works Department (CPWD)",
     role: "Government Liaison Representative",
     project: "The Iconic Entrance of the National Institute of Technology, Warangal",
-    image: "/projects/nit-warangal.jpg",
+    image: "/projects/nit-warangal-2.jpg",
   },
   {
     quote:
@@ -230,7 +230,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Dr. Uske Kiran",
     role: "M.S., M.Ch. (Urology) • Gold Medalist",
     project: "Kiran Kidney Care",
-    image: "/projects/kiran-kidney.jpg",
+    image: "/projects/kiran-kidney-2.jpg",
   },
   {
     quote:
@@ -238,7 +238,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Mr Ugender",
     role: "M.Tech Gold Medalist, Osmania University",
     project: "Sri Matru Sri College",
-    image: "/projects/mathrushri-college.jpg",
+    image: "/projects/matrusri-onsite.jpg",
   },
   {
     quote:
@@ -246,7 +246,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Mr P. Venkata Ramana",
     role: "Chief Engineer, Indian Merchant Navy",
     project: "Pothunuri Convention Hall",
-    image: "/projects/pothunuri.jpg",
+    image: "/projects/pothunuri-v1.jpg",
   },
   {
     quote:
