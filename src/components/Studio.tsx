@@ -109,62 +109,156 @@ export default function Studio() {
 
       {/* The Founders */}
       <div className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-32 border-b border-line">
-        <span className="label text-accent font-medium">Leadership</span>
-        <h3 className="display mt-4 mb-16 text-[clamp(2.2rem,5vw,4rem)]">
+        <span className="label text-accent font-medium uppercase tracking-[0.3em] text-xs">Leadership</span>
+        <h3 className="display mt-4 mb-24 text-[clamp(2.2rem,5vw,4rem)]">
           The Founders
         </h3>
-        <div className="grid gap-12 md:grid-cols-2">
+        
+        <div className="flex flex-col gap-32 md:gap-48">
           {/* Rajesh */}
-          <div className="reveal border-t border-ink pt-8 flex flex-col gap-6">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-paper-2">
+          <div className="reveal grid gap-12 md:grid-cols-12 items-center">
+            {/* Portrait */}
+            <div className="md:col-span-5 relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-paper-2 group">
               <Image
                 src="/team/rajesh.png"
                 alt="Rajesh Naik — Chief Space Architect & Founder of Void Architects"
                 fill
-                sizes="(min-width: 768px) 50vw, 100vw"
-                className="object-cover transition-transform duration-700 hover:scale-105"
+                sizes="(min-width: 768px) 40vw, 100vw"
+                className="object-cover grayscale sepia-[15%] transition-all duration-700 hover:scale-[1.03] hover:grayscale-0 hover:sepia-0"
                 priority
               />
             </div>
-            <div className="flex justify-between items-baseline">
+            {/* Info */}
+            <div className="md:col-span-6 md:col-start-7 flex flex-col gap-6">
               <div>
-                <h4 className="display text-2xl md:text-3xl">Rajesh Naik</h4>
-                <p className="text-sm text-muted mt-1">Chief Space Architect</p>
+                <h4 className="display text-4xl md:text-5xl lg:text-6xl font-normal relative group/title inline-block">
+                  Rajesh Naik
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-ink transition-all duration-500 group-hover/title:w-full"></span>
+                </h4>
+                <p className="text-base text-muted uppercase tracking-[0.2em] mt-2">Co-Founder & Architect</p>
               </div>
-              <span className="display font-mono text-[3rem] text-ink/10 leading-none">RN</span>
-            </div>
-            <p className="prose-lg text-ink-soft leading-relaxed text-base">
-              Believing that architecture is ultimately about human experience, Rajesh approaches every project through the lens of context, proportion, and purpose.
-            </p>
-            <div className="mt-2 text-ink-soft italic border-l-2 border-line pl-4">
-              &ldquo;Every space has a story waiting to be revealed. Our role is simply to uncover it.&rdquo;
+
+              <blockquote className="display text-2xl md:text-3xl italic text-ink-soft leading-snug border-l-2 border-accent pl-6 my-4">
+                &ldquo;Architecture is not built. It is remembered.&rdquo;
+              </blockquote>
+
+              <div className="flex flex-col gap-4 text-base">
+                <div>
+                  <span className="font-semibold text-muted text-xs uppercase tracking-wider block">Biography</span>
+                  <p className="text-ink-soft mt-1 leading-relaxed">
+                    Believing that architecture is ultimately about human experience, Rajesh approaches every project through the lens of context, proportion, and purpose.
+                  </p>
+                </div>
+                <div>
+                  <span className="font-semibold text-muted text-xs uppercase tracking-wider block">Design Philosophy</span>
+                  <p className="text-ink-soft mt-1 leading-relaxed">
+                    Uncovering the silent narratives of spaces through exposing natural materials and respecting the site’s innate context.
+                  </p>
+                </div>
+              </div>
+
+              {/* Personal Details Grid */}
+              <div className="grid grid-cols-2 gap-x-6 gap-y-4 border-t border-b border-line py-6 my-2 text-sm">
+                <div>
+                  <span className="text-muted block font-medium">Experience</span>
+                  <span className="text-ink font-semibold mt-1 block">8+ Years</span>
+                </div>
+                <div>
+                  <span className="text-muted block font-medium">Specialisation</span>
+                  <span className="text-ink font-semibold mt-1 block">Residential Design</span>
+                </div>
+                <div>
+                  <span className="text-muted block font-medium">Believes In</span>
+                  <span className="text-ink font-semibold mt-1 block">Minimalism & Context</span>
+                </div>
+                <div>
+                  <span className="text-muted block font-medium">Favourite Material</span>
+                  <span className="text-ink font-semibold mt-1 block">Exposed Concrete</span>
+                </div>
+              </div>
+
+              <div className="flex gap-6 mt-2">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold tracking-wider uppercase border-b border-ink hover:text-accent hover:border-accent transition-colors">
+                  LinkedIn
+                </a>
+                <a href="mailto:rajesh@voidarchitects.in" className="text-sm font-semibold tracking-wider uppercase border-b border-ink hover:text-accent hover:border-accent transition-colors">
+                  Email
+                </a>
+              </div>
             </div>
           </div>
 
           {/* Anil */}
-          <div className="reveal border-t border-ink pt-8 flex flex-col gap-6">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-paper-2">
+          <div className="reveal grid gap-12 md:grid-cols-12 items-center">
+            {/* Info */}
+            <div className="md:col-span-6 md:col-span-push-6 flex flex-col gap-6 md:order-1">
+              <div>
+                <h4 className="display text-4xl md:text-5xl lg:text-6xl font-normal relative group/title inline-block">
+                  Anil Kumar
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-ink transition-all duration-500 group-hover/title:w-full"></span>
+                </h4>
+                <p className="text-base text-muted uppercase tracking-[0.2em] mt-2">Co-Founder & Chief Visionary</p>
+              </div>
+
+              <blockquote className="display text-2xl md:text-3xl italic text-ink-soft leading-snug border-l-2 border-accent pl-6 my-4">
+                &ldquo;Architecture is the art of giving form to ideas and meaning to space.&rdquo;
+              </blockquote>
+
+              <div className="flex flex-col gap-4 text-base">
+                <div>
+                  <span className="font-semibold text-muted text-xs uppercase tracking-wider block">Biography</span>
+                  <p className="text-ink-soft mt-1 leading-relaxed">
+                    Driven by ideas and possibilities, Anil brings together conceptual thinking, spatial imagination, and design philosophy to shape meaningful architectural narratives.
+                  </p>
+                </div>
+                <div>
+                  <span className="font-semibold text-muted text-xs uppercase tracking-wider block">Design Philosophy</span>
+                  <p className="text-ink-soft mt-1 leading-relaxed">
+                    Balancing creative vision, technical precision, and contextual understanding in every project to turn dreams into reality.
+                  </p>
+                </div>
+              </div>
+
+              {/* Personal Details Grid */}
+              <div className="grid grid-cols-2 gap-x-6 gap-y-4 border-t border-b border-line py-6 my-2 text-sm">
+                <div>
+                  <span className="text-muted block font-medium">Experience</span>
+                  <span className="text-ink font-semibold mt-1 block">10+ Years</span>
+                </div>
+                <div>
+                  <span className="text-muted block font-medium">Specialisation</span>
+                  <span className="text-ink font-semibold mt-1 block">Commercial & Luxury Estates</span>
+                </div>
+                <div>
+                  <span className="text-muted block font-medium">Believes In</span>
+                  <span className="text-ink font-semibold mt-1 block">Purpose-driven Innovation</span>
+                </div>
+                <div>
+                  <span className="text-muted block font-medium">Favourite Material</span>
+                  <span className="text-ink font-semibold mt-1 block">Natural Stone</span>
+                </div>
+              </div>
+
+              <div className="flex gap-6 mt-2">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold tracking-wider uppercase border-b border-ink hover:text-accent hover:border-accent transition-colors">
+                  LinkedIn
+                </a>
+                <a href="mailto:anil@voidarchitects.in" className="text-sm font-semibold tracking-wider uppercase border-b border-ink hover:text-accent hover:border-accent transition-colors">
+                  Email
+                </a>
+              </div>
+            </div>
+
+            {/* Portrait */}
+            <div className="md:col-span-5 md:col-start-8 relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-paper-2 group md:order-2">
               <Image
                 src="/team/anil.jpg"
                 alt="Anil Kumar Nekkalapudi — Chief Vision Architect & Founder of Void Architects"
                 fill
-                sizes="(min-width: 768px) 50vw, 100vw"
-                className="object-cover transition-transform duration-700 hover:scale-105"
+                sizes="(min-width: 768px) 40vw, 100vw"
+                className="object-cover grayscale sepia-[15%] transition-all duration-700 hover:scale-[1.03] hover:grayscale-0 hover:sepia-0"
                 priority
               />
-            </div>
-            <div className="flex justify-between items-baseline">
-              <div>
-                <h4 className="display text-2xl md:text-3xl">Anil Kumar Nekkalapudi</h4>
-                <p className="text-sm text-muted mt-1">Chief Vision Architect</p>
-              </div>
-              <span className="display font-mono text-[3rem] text-ink/10 leading-none">AN</span>
-            </div>
-            <p className="prose-lg text-ink-soft leading-relaxed text-base">
-              Driven by ideas and possibilities, Anil brings together conceptual thinking, spatial imagination, and design philosophy to shape meaningful architectural narratives.
-            </p>
-            <div className="mt-2 text-ink-soft italic border-l-2 border-line pl-4">
-              &ldquo;Architecture is the art of giving form to ideas and meaning to space.&rdquo;
             </div>
           </div>
         </div>
