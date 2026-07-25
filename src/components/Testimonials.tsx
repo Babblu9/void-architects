@@ -1,27 +1,14 @@
 "use client";
 
-import { useRef } from "react";
 import Image from "next/image";
 import Reveal from "./Reveal";
 import { TESTIMONIALS } from "@/lib/data";
 
 export default function Testimonials() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const scroll = (direction: "left" | "right") => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const scrollAmount = 444; // Card width (420px) + gap (24px)
-    el.scrollBy({
-      left: direction === "left" ? -scrollAmount : scrollAmount,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <section id="testimonials" className="border-t border-line bg-paper-2 py-24 md:py-36 overflow-hidden">
       <div className="mx-auto max-w-[1600px] px-5 md:px-10">
-        {/* Header with Slider Controls */}
+        {/* Header */}
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between mb-16">
           <Reveal>
             <span className="label text-muted text-xs uppercase tracking-widest font-mono">Testimonials</span>
@@ -31,33 +18,10 @@ export default function Testimonials() {
               those who inhabit them.
             </h2>
           </Reveal>
-          
-          {/* Slider Controls */}
-          <Reveal className="hidden md:flex gap-3 self-end md:self-auto">
-            <button
-              onClick={() => scroll("left")}
-              className="w-12 h-12 rounded-full border border-line flex items-center justify-center hover:bg-ink hover:text-paper transition-colors cursor-pointer text-ink bg-pure"
-              aria-label="Previous testimonials"
-            >
-              <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-              </svg>
-            </button>
-            <button
-              onClick={() => scroll("right")}
-              className="w-12 h-12 rounded-full border border-line flex items-center justify-center hover:bg-ink hover:text-paper transition-colors cursor-pointer text-ink bg-pure"
-              aria-label="Next testimonials"
-            >
-              <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-              </svg>
-            </button>
-          </Reveal>
         </div>
 
         {/* Horizontal Slider Track */}
         <div
-          ref={scrollRef}
           className="flex gap-6 overflow-x-auto scrollbar-none snap-x snap-mandatory pb-6 px-1 -mx-5 md:-mx-10 md:px-10"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
