@@ -118,7 +118,7 @@ export default function Studio() {
           {/* Rajesh */}
           <div className="reveal grid gap-12 md:grid-cols-12 items-center">
             {/* Portrait */}
-            <div className="md:col-span-5 relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-paper-2 group">
+            <div className="md:col-span-5 relative aspect-square w-full overflow-hidden rounded-full bg-paper-2 group">
               <Image
                 src="/team/rajesh.png"
                 alt="Rajesh Naik — Chief Space Architect & Founder of Void Architects"
@@ -250,7 +250,7 @@ export default function Studio() {
             </div>
 
             {/* Portrait */}
-            <div className="md:col-span-5 md:col-start-8 relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-paper-2 group md:order-2">
+            <div className="md:col-span-5 md:col-start-8 relative aspect-square w-full overflow-hidden rounded-full bg-paper-2 group md:order-2">
               <Image
                 src="/team/anil.jpg"
                 alt="Anil Kumar Nekkalapudi — Chief Vision Architect & Founder of Void Architects"
