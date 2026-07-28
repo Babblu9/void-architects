@@ -86,7 +86,7 @@ export const PROJECTS: Project[] = [
     location: "Hanamkonda",
     year: "2024",
     area: "3,375 sq.ft.",
-    image: "/projects/sree-reddy.jpg",
+    image: "/projects/sree-reddy-clean.jpg",
     w: 1326,
     h: 1186,
     blurb:
@@ -222,7 +222,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Dr Sree Reddy",
     role: "MBBS, MCh (USA)",
     project: "Dr. Sree Reddy Residence",
-    image: "/projects/sree-reddy.jpg",
+    image: "/projects/sree-reddy-clean.jpg",
   },
   {
     quote:

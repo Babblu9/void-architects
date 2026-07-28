@@ -15,7 +15,7 @@ const SLIDES = [
   {
     id: "02",
     title: "Spaces That Speak Without Words.",
-    image: "/projects/sree-reddy-v1.jpg",
+    image: "/projects/sree-reddy-v2.jpg",
     alt: "Dr Sree Reddy Residence by Void Architects — contemporary tropical-minimalist duplex at dusk",
   },
   {
