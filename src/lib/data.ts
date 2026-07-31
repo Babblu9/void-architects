@@ -139,8 +139,8 @@ export const PROJECTS: Project[] = [
     year: "2024",
     area: "6,150 sq.ft.",
     image: "/projects/mathrushri-college.jpg",
-    w: 2000,
-    h: 1500,
+    w: 3020,
+    h: 2188,
     blurb:
       "A contemporary-minimal degree college building — clean geometry and modern facade design creating a well-balanced commercial and academic identity.",
   },
