@@ -238,7 +238,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Mr Ugender",
     role: "M.Tech Gold Medalist, Osmania University",
     project: "Sri Matru Sri College",
-    image: "/projects/matrusri-onsite.jpg",
+    image: "/projects/mathrushri-college.jpg",
   },
   {
     quote:
@@ -246,7 +246,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Mr P. Venkata Ramana",
     role: "Chief Engineer, Indian Merchant Navy",
     project: "Pothunuri Convention Hall",
-    image: "/projects/pothunuri-v1.jpg",
+    image: "/projects/pothunuri.jpg",
   },
   {
     quote:

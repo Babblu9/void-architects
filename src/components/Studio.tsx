@@ -46,7 +46,7 @@ export default function Studio() {
       {/* Full-bleed image band */}
       <div className="reveal-mask relative mt-20 h-[52vh] min-h-[340px] w-full overflow-hidden md:mt-28 md:h-[70vh]">
         <Image
-          src="/projects/matrusri-onsite.jpg"
+          src="/projects/mathrushri-college.jpg"
           alt="Sri Matru Sri College by Void Architects — contemporary institutional building on-site"
           fill
           sizes="100vw"

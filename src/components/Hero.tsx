@@ -15,13 +15,13 @@ const SLIDES = [
   {
     id: "02",
     title: "Spaces That Speak Without Words.",
-    image: "/projects/sree-reddy-v2.jpg",
+    image: "/projects/sree-reddy-clean.jpg",
     alt: "Dr Sree Reddy Residence by Void Architects — contemporary tropical-minimalist duplex at dusk",
   },
   {
     id: "03",
     title: "Designed to Endure. Crafted to Inspire.",
-    image: "/projects/pothunuri-v1.jpg",
+    image: "/projects/pothunuri.jpg",
     alt: "Pothunuri Convention Hall by Void Architects — contemporary luxury convention hall",
   },
 ];
